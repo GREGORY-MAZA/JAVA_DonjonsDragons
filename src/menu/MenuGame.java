@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class MenuGame {
     public static void MenuChoixPerso() {
+
         String Wawa = "Warrior";
         String Wiwi = "Wizard";
 
@@ -17,28 +18,26 @@ public class MenuGame {
             System.out.println("Please Choose Warrior or Wizard");
             LeChoix=ChoixPerso.nextLine();
         }
+
         Tools.waitSec(2);
+
         System.out.println("______________________________________________");
         System.out.println("    Very nice choice Mister " + LeChoix + " !         |" );
         System.out.println("______________________________________________|");
         System.out.println("");
 
         Tools.waitSec(2);
+
         System.out.println("Choose your name " + LeChoix);
         Scanner ChoixName = new Scanner(System.in);
         String LeChoixDuName=ChoixName.nextLine();
+
         Tools.waitSec(2);
+
         System.out.println("Really ? " + LeChoixDuName + " ....... let me see");
+
         Tools.waitSec(3);
+
         System.out.println("Tu vas à l'école et tu habites en Auvergne Rhône Alpes " + LeChoixDuName + " .....");
-
-
-
-
-
-
-
-
-
     }
 }
