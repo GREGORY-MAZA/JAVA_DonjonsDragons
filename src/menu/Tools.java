@@ -1,5 +1,7 @@
 package menu;
 
+import javax.swing.*;
+
 public class Tools {
 
 
@@ -19,5 +21,18 @@ public class Tools {
         {
             Thread.currentThread().interrupt();
         }
+
     }
+
+    public static void StopGame() {
+
+        System.out.println("          _______________________________________");
+        System.out.println("           You can come back later My friend.....");
+        System.out.println("          _______________________________________");
+        System.exit(0);
+    }
+
+
+
+
 }
