@@ -1,5 +1,7 @@
 package menu;
 
+//-------------------------------- DECLARATION ATTRIBUTES CLASS ---------------------------
+
 public class Wizard {
 
     private String name;
@@ -8,6 +10,31 @@ public class Wizard {
     private String spell;
     private String buff;
 
+    //------------------------------------ CONSTRUCTORS ---------------------------------------
+
+    public Wizard() {
+        this.name = name;
+        this.health = health;
+        this.attack = attack;
+        this.spell = spell;
+        this.buff = buff;
+    }
+     public Wizard(String name) {
+         this.name = name;
+         this.health = health;
+         this.attack = attack;
+         this.spell = spell;
+         this.buff = buff;
+     }
+     public Wizard(String name, int health, int attack) {
+         this.name = name;
+         this.health = health;
+         this.attack = attack;
+         this.spell = spell;
+         this.buff = buff;
+     }
+
+
     public Wizard(String name, int health, int attack, String spell, String buff) {
         this.name = name;
         this.health = health;
@@ -15,6 +42,8 @@ public class Wizard {
         this.spell = spell;
         this.buff = buff;
     }
+
+//------------------------------------ GETTERS & SETTERS  ------------------------------------------
 
     public String getName() {
         return name;
@@ -40,6 +69,8 @@ public class Wizard {
 
     public String getBuff() { return buff;}
     public void setBuff (String buff) { this.buff = buff;}
+
+    //------------------------------------ FUNCTION TOSTRING  ------------------------------------------
 
     public String toString() {
         return

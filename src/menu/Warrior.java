@@ -1,5 +1,7 @@
 package menu;
 
+//-------------------------------- DECLARATION ATTRIBUTES CLASS ---------------------------
+
 public class Warrior {
 
     private String name;
@@ -8,6 +10,31 @@ public class Warrior {
     private String weapon;
     private String defense;
 
+//------------------------------------ CONSTRUCTORS ---------------------------------------
+
+    public Warrior() {
+        this.name = name;
+        this.health = health;
+        this.attack = attack;
+        this.weapon = weapon;
+        this.defense = defense;
+    }
+    public Warrior(String name) {
+        this.name = name;
+        this.health = health;
+        this.attack = attack;
+        this.weapon = weapon;
+        this.defense = defense;
+    }
+
+    public Warrior(String name,int health,int attack){
+        this.name = name;
+        this.health = health;
+        this.attack = attack;
+        this.weapon = weapon;
+        this.defense = defense;
+    }
+
     public Warrior(String name, int health, int attack, String weapon, String defense) {
         this.name = name;
         this.health = health;
@@ -15,6 +42,8 @@ public class Warrior {
         this.weapon = weapon;
         this.defense = defense;
     }
+
+//------------------------------------ GETTERS & SETTERS  ------------------------------------------
 
     public String getName() {
         return name;
@@ -40,6 +69,9 @@ public class Warrior {
 
     public String getDefense() { return defense;}
     public void setDefense (String spell) { this.defense = defense;}
+
+
+//------------------------------------ FUNCTION TOSTRING  ------------------------------------------
 
     @Override
     public String toString() {

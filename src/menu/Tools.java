@@ -26,11 +26,14 @@ public class Tools {
 
     public static void StopGame() {
 
-        System.out.println("          _______________________________________");
-        System.out.println("           You can come back later My friend.....");
-        System.out.println("          _______________________________________");
+        System.out.println("_________________________________________________________________________________________");
+        System.out.println(" ");
+        System.out.println("                        You can come back later My friend.....");
+        System.out.println(" ");
+        System.out.println("_________________________________________________________________________________________");
         System.exit(0);
     }
+
 
 
 
