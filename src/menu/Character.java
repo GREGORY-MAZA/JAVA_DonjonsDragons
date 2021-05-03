@@ -1,49 +1,60 @@
 package menu;
 
-//-------------------------------- DECLARATION ATTRIBUTES CLASS ---------------------------
+    //-------------------------------- DECLARATION ATTRIBUTES CLASS ---------------------------
 
-public class Warrior extends Character{
+public class Character {
 
     private String name;
     private int health;
     private int attack;
     private String weapon;
     private String defense;
+    private String spell;
+    private String buff;
 
-//------------------------------------ CONSTRUCTORS ---------------------------------------
 
-    public Warrior() {
+    //------------------------------------ CONSTRUCTORS ---------------------------------------
+
+    public Character(String name, int health, int attack) {
+
         this.name = name;
         this.health = health;
         this.attack = attack;
         this.weapon = weapon;
         this.defense = defense;
+        this.spell = spell;
+        this.buff = buff;
+
     }
-    public Warrior(String name) {
+
+    public Character(String name, int health, int attack, String defense, String) {
+
         this.name = name;
         this.health = health;
         this.attack = attack;
         this.weapon = weapon;
         this.defense = defense;
+        this.spell = spell;
+        this.buff = buff;
+
     }
 
-    public Warrior(String name,int health,int attack){
+    public Character(String name, int health, int attack, String spell, String buff) {
+
         this.name = name;
         this.health = health;
         this.attack = attack;
         this.weapon = weapon;
         this.defense = defense;
+        this.spell = spell;
+        this.buff = buff;
+
     }
 
-    public Warrior(String name, int health, int attack, String weapon, String defense) {
-        this.name = name;
-        this.health = health;
-        this.attack = attack;
-        this.weapon = weapon;
-        this.defense = defense;
-    }
 
-//------------------------------------ GETTERS & SETTERS  ------------------------------------------
+
+
+    //------------------------------------ GETTERS & SETTERS  ------------------------------------------
 
     public String getName() {
         return name;
@@ -70,17 +81,21 @@ public class Warrior extends Character{
     public String getDefense() { return defense;}
     public void setDefense (String spell) { this.defense = defense;}
 
+    public String getSpell() { return spell;}
+    public void setSpell (String weapon) { this.spell = weapon;}
 
-//------------------------------------ FUNCTION TOSTRING  ------------------------------------------
+    public String getBuff() { return buff;}
+    public void setBuff (String buff) { this.buff = buff;}
 
-    @Override
+
+    //------------------------------------ FUNCTION TOSTRING  ------------------------------------------
+
     public String toString() {
         return
 
                 "     NICKNAME : " + name +
-                "     HEALTH POINT : " + health +
-                "     STRENGTH : " + attack +
-                "     ATTACK ITEM : " + weapon +
-                "     SHIELD ITEM : " + defense;
+                        "     HEALTH POINT : " + health +
+                        "     STRENGTH : " + attack;
     }
+
 }
