@@ -28,7 +28,7 @@ public class BoardGame {
 
 
     public int getSquarePlayer() { return squarePlayer; }
-    public void setSquarePlayer() {
+    public void setSquarePlayer(int squarePlayer) {
         this.squarePlayer = squarePlayer;
     }
 

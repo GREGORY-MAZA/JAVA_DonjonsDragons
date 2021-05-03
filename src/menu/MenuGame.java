@@ -7,12 +7,15 @@ public class MenuGame {
     private Wizard HeroWizard;
     private BoardGame HeroBoardGame;
     private DiceGame HeroDiceGame;
+    private Tools tools = new Tools();
+
 
     public MenuGame(){
         HeroWarrior = null;
         HeroWizard = null;
         HeroDiceGame = null;
         HeroBoardGame = null;
+
 
     }
     public void MenuChoixPerso() {
@@ -132,21 +135,12 @@ public class MenuGame {
             HeroDiceGame = new DiceGame(0);
             HeroBoardGame = new BoardGame(1);
 
-            //while (HeroBoardGame.getSquarePlayer() <= 64) {
-            System.out.println(HeroBoardGame);
-            System.out.println(HeroDiceGame);
-            HeroDiceGame.RollTheDice();
-            System.out.println(HeroDiceGame.RollTheDice());
-            HeroDiceGame.RollTheDice();
-            System.out.println(HeroDiceGame.RollTheDice());
-            HeroDiceGame.RollTheDice();
-            System.out.println(HeroDiceGame.RollTheDice());
-            HeroDiceGame.RollTheDice();
-            System.out.println(HeroDiceGame.RollTheDice());
-            //    System.out.println(HeroDiceGame);
-            //    System.out.println(HeroBoardGame.toString());
-            //    System.out.println(HeroBoardGame);
-            //}
+            while (HeroBoardGame.getSquarePlayer() <= 64) {
+                int repDice = Tools.RollTheDice();
+                Tools.waitSec(1);
+                HeroBoardGame.setSquarePlayer(HeroBoardGame.getSquarePlayer() + repDice);
+                System.out.println(HeroBoardGame);
+                Tools.waitSec(1);
 
 
         }
@@ -154,9 +148,21 @@ public class MenuGame {
         if (RepStartNewGame.equalsIgnoreCase("no")){
             Tools.StopGame();
         }
+        if (HeroBoardGame.getSquarePlayer()>=64);
 
-
+            System.out.println("Your are on the Square 64 ! You Win" + LeChoixDuName);
+            System.out.println("");
+            Tools.waitSec(2);
+            System.err.println("****************   **      **  ***********     *********  ***      **  ***********            ");
+            System.err.println("       **          **      **  **              **         ****     **    **       **                ");
+            System.err.println("       **          **      **  **              **         ** **    **     **       **               ");
+            System.err.println("       **          **********  ********        ******     **  **   **      **       **                ");
+            System.err.println("       **          **      **  **              **         **   **  **      **       **              ");
+            System.err.println("       **          **      **  **              **         **    ** **     **       **               ");
+            System.err.println("       **          **      **  **              **         **     ****    **       **                ");
+            System.err.println("       **          **      **  ***********     *********  **      ***   *********                         ");
 
     }
 
+}
 }

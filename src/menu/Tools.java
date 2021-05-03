@@ -34,8 +34,10 @@ public class Tools {
         System.exit(0);
     }
 
-
-
-
+    public static int RollTheDice() {
+       int DiceGameFace = (int) (Math.random()*6 + 1);
+        System.out.println("You roll the dice ! : " + DiceGameFace);
+        return DiceGameFace;
+    }
 
 }

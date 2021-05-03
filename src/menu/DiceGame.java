@@ -23,8 +23,8 @@ public class DiceGame {
         return "You roll the dice  : "+ DiceGameFace;
     }
 
-    public int RollTheDice() {
-        DiceGameFace = (int) (Math.random()*6 + 1);
-        return DiceGameFace;
-    }
+   // public int RollTheDice() {
+     //   DiceGameFace = (int) (Math.random()*6 + 1);
+      //  return DiceGameFace;
+    //}
 }
