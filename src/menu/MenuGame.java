@@ -53,7 +53,7 @@ public class MenuGame {
         Tools.waitSec(1);
 
         System.err.println("-----------------------------------------------------------------------------------------");
-        System.out.println("Choose your name " + LeChoix);
+        System.out.println("                             Choose your name " + LeChoix);
         Scanner ChoixName = new Scanner(System.in);
         String LeChoixDuName=ChoixName.nextLine();
 
@@ -123,34 +123,44 @@ public class MenuGame {
             System.err.println("-----------------------------------------------------------------------------------------");
             System.err.println("                                    ONCE UPON A TIME");
             System.err.println("-----------------------------------------------------------------------------------------");
+            System.err.println("");
+            System.err.println("               A long time ago a warrior named " + LeChoixDuName + " did a quest .... ");
+            System.err.println("                     The great epic quest of 'The Digital Campus student' ...");
+            System.err.println("");
+            System.err.println("-----------------------------------------------------------------------------------------");
+            //System.out.println(HeroBoardGame.toString());
             System.out.println("");
+            //System.out.println("It's time to roll the dice....    " + LeChoixDuName );
             System.out.println("");
-            System.out.println("A long time ago a warrior named " + LeChoixDuName + " did a quest .... ");
-            System.out.println("The great epic quest of 'The Digital Campus student' ...");
-            System.out.println("");
-            System.out.println("");
-            System.out.println(HeroBoardGame.toString());
-            System.out.println("");
-            System.out.println("It's time to roll the dice....    " + LeChoixDuName );
             HeroDiceGame = new DiceGame(0);
             HeroBoardGame = new BoardGame(1);
 
-            while (HeroBoardGame.getSquarePlayer() <= 64) {
-                int repDice = Tools.RollTheDice();
-                Tools.waitSec(1);
-                HeroBoardGame.setSquarePlayer(HeroBoardGame.getSquarePlayer() + repDice);
+            while (HeroBoardGame.getSquarePlayer() < 64) {
                 System.out.println(HeroBoardGame);
-                Tools.waitSec(1);
+                System.out.println("");
+                System.out.println("                Do you want roll the dice ?      yes / no");
+                Scanner RepRerollDice = new Scanner(System.in);
+                String ChoiceRerollDice = RepRerollDice.nextLine();
+                if (ChoiceRerollDice.equalsIgnoreCase("yes")){
 
+                    int repDice = Tools.RollTheDice();
+                    //Tools.waitSec(1);
+                    HeroBoardGame.setSquarePlayer(HeroBoardGame.getSquarePlayer() + repDice);
+                    //Tools.waitSec(1);
 
-        }
+                }
+                if (ChoiceRerollDice.equalsIgnoreCase("no")){
+                    Tools.StopGame();
+                }
+            }
+
 
         if (RepStartNewGame.equalsIgnoreCase("no")){
             Tools.StopGame();
         }
         if (HeroBoardGame.getSquarePlayer()>=64);
 
-            System.out.println("Your are on the Square 64 ! You Win" + LeChoixDuName);
+            System.out.println("Congratulation ! You Win " + LeChoixDuName);
             System.out.println("");
             Tools.waitSec(2);
             System.err.println("****************   **      **  ***********     *********  ***      **  ***********            ");

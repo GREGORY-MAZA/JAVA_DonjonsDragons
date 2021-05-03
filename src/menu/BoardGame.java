@@ -57,6 +57,6 @@ public class BoardGame {
 
     @Override
     public String toString() {
-        return "You are on the square number : "+ squarePlayer;
+        return "                         You are on the square number : "+ squarePlayer;
     }
 }
