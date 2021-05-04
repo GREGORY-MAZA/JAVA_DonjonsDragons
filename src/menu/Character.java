@@ -7,10 +7,7 @@ public class Character {
     private String name;
     private int health;
     private int attack;
-    private String weapon;
-    private String defense;
-    private String spell;
-    private String buff;
+
 
 
     //------------------------------------ CONSTRUCTORS ---------------------------------------
@@ -20,38 +17,8 @@ public class Character {
         this.name = name;
         this.health = health;
         this.attack = attack;
-        this.weapon = weapon;
-        this.defense = defense;
-        this.spell = spell;
-        this.buff = buff;
 
     }
-
-    public Character(String name, int health, int attack, String defense) {
-
-        this.name = name;
-        this.health = health;
-        this.attack = attack;
-        this.weapon = weapon;
-        this.defense = defense;
-        this.spell = spell;
-        this.buff = buff;
-
-    }
-
-    public Character(String name, int health, int attack, String spell, String buff) {
-
-        this.name = name;
-        this.health = health;
-        this.attack = attack;
-        this.weapon = weapon;
-        this.defense = defense;
-        this.spell = spell;
-        this.buff = buff;
-
-    }
-
-
 
 
     //------------------------------------ GETTERS & SETTERS  ------------------------------------------
@@ -75,17 +42,6 @@ public class Character {
         this.attack = attack;
     }
 
-    public String getWeapon() { return weapon;}
-    public void setWeapon (String weapon) { this.weapon = weapon;}
-
-    public String getDefense() { return defense;}
-    public void setDefense (String spell) { this.defense = defense;}
-
-    public String getSpell() { return spell;}
-    public void setSpell (String weapon) { this.spell = weapon;}
-
-    public String getBuff() { return buff;}
-    public void setBuff (String buff) { this.buff = buff;}
 
 
     //------------------------------------ FUNCTION TOSTRING  ------------------------------------------

@@ -2,67 +2,33 @@ package menu;
 
 //-------------------------------- DECLARATION ATTRIBUTES CLASS ---------------------------
 
-public class Wizard {
+public class Wizard extends Character{
 
-    private String name;
-    private int health;
-    private int attack;
     private String spell;
     private String buff;
 
     //------------------------------------ CONSTRUCTORS ---------------------------------------
 
     public Wizard() {
-        this.name = name;
-        this.health = health;
-        this.attack = attack;
-        this.spell = spell;
-        this.buff = buff;
+        super("Greg",3,8);
     }
      public Wizard(String name) {
-         this.name = name;
-         this.health = health;
-         this.attack = attack;
-         this.spell = spell;
-         this.buff = buff;
+        super(name,5,8);
+
      }
      public Wizard(String name, int health, int attack) {
-         this.name = name;
-         this.health = health;
-         this.attack = attack;
-         this.spell = spell;
-         this.buff = buff;
+         super(name,health,attack);
      }
 
 
     public Wizard(String name, int health, int attack, String spell, String buff) {
-        this.name = name;
-        this.health = health;
-        this.attack = attack;
+        super(name,health,attack);
         this.spell = spell;
         this.buff = buff;
     }
 
 //------------------------------------ GETTERS & SETTERS  ------------------------------------------
 
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getHealth() {
-        return health;
-    }
-    public void setHealth(int health) {
-        this.health = health;
-    }
-
-    public int getAttack() { return attack; }
-    public void setAttack(int attack) {
-        this.attack = attack;
-    }
 
     public String getSpell() { return spell;}
     public void setSpell (String weapon) { this.spell = weapon;}
@@ -75,9 +41,9 @@ public class Wizard {
     public String toString() {
         return
 
-                "     NICKNAME : " + name +
-                        "     HEALTH POINT : " + health +
-                        "     STRENGTH : " + attack +
+                "     NICKNAME : " + getName() +
+                        "     HEALTH POINT : " + getHealth() +
+                        "     STRENGTH : " + getAttack() +
                         "     SPELL ATTACK : " + spell +
                         "     BUFF ARMOR : " + buff;
     }

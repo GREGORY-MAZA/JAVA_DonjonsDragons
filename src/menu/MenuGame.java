@@ -88,7 +88,7 @@ public class MenuGame {
         Tools.waitSec(1);
 
         if (LeChoix.equalsIgnoreCase("Warrior")){
-            HeroWarrior = new Warrior(LeChoixDuName,5,5,"sword", "shield");
+            HeroWarrior = new Warrior(LeChoixDuName);
             System.out.println("_______________________________________________________________________________________________________________________");
             System.out.println("");
             System.out.println(HeroWarrior.toString());
@@ -100,7 +100,7 @@ public class MenuGame {
         }
 
         if (LeChoix.equalsIgnoreCase("Wizard")){
-            HeroWizard = new Wizard(LeChoixDuName,3,8,"fire", "armor");
+            HeroWizard = new Wizard(LeChoixDuName);
             System.out.println("_______________________________________________________________________________________________________________________");
             System.out.println("");
             System.out.println(HeroWizard.toString());

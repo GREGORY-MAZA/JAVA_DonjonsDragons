@@ -2,67 +2,31 @@ package menu;
 
 //-------------------------------- DECLARATION ATTRIBUTES CLASS ---------------------------
 
-public class Warrior {
+public class Warrior extends Character{
 
-    private String name;
-    private int health;
-    private int attack;
     private String weapon;
     private String defense;
 
 //------------------------------------ CONSTRUCTORS ---------------------------------------
 
-    public Warrior() {
-        this.name = name;
-        this.health = health;
-        this.attack = attack;
-        this.weapon = weapon;
-        this.defense = defense;
-    }
+    public Warrior() { super("Greg",5,8); }
+
     public Warrior(String name) {
-        this.name = name;
-        this.health = health;
-        this.attack = attack;
-        this.weapon = weapon;
-        this.defense = defense;
+        super(name,5,8);
     }
 
     public Warrior(String name,int health,int attack){
-        this.name = name;
-        this.health = health;
-        this.attack = attack;
-        this.weapon = weapon;
-        this.defense = defense;
+        super(name,health, attack);
     }
 
     public Warrior(String name, int health, int attack, String weapon, String defense) {
-        this.name = name;
-        this.health = health;
-        this.attack = attack;
+        super(name,health, attack);
         this.weapon = weapon;
         this.defense = defense;
     }
 
 //------------------------------------ GETTERS & SETTERS  ------------------------------------------
 
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getHealth() {
-        return health;
-    }
-    public void setHealth(int health) {
-        this.health = health;
-    }
-
-    public int getAttack() { return attack; }
-    public void setAttack(int attack) {
-        this.attack = attack;
-    }
 
     public String getWeapon() { return weapon;}
     public void setWeapon (String weapon) { this.weapon = weapon;}
@@ -77,9 +41,9 @@ public class Warrior {
     public String toString() {
         return
 
-                "     NICKNAME : " + name +
-                "     HEALTH POINT : " + health +
-                "     STRENGTH : " + attack +
+                "     NICKNAME : " + getName() +
+                "     HEALTH POINT : " + getHealth() +
+                "     STRENGTH : " + getAttack() +
                 "     ATTACK ITEM : " + weapon +
                 "     SHIELD ITEM : " + defense;
     }
