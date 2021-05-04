@@ -27,7 +27,7 @@ public class Character {
 
     }
 
-    public Character(String name, int health, int attack, String defense, String) {
+    public Character(String name, int health, int attack, String defense) {
 
         this.name = name;
         this.health = health;

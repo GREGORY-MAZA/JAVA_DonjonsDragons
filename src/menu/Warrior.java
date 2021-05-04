@@ -2,7 +2,7 @@ package menu;
 
 //-------------------------------- DECLARATION ATTRIBUTES CLASS ---------------------------
 
-public class Warrior extends Character{
+public class Warrior {
 
     private String name;
     private int health;

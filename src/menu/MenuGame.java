@@ -23,6 +23,7 @@ public class MenuGame {
         String Wawa = "Warrior";
         String Wiwi = "Wizard";
 
+
         System.out.println("           ************************************************************");
         System.out.println("* * * * * * *  If you want play a new adventure write " + Wawa + " or " +Wiwi + " * * * * * * *");
         System.out.println("           ************************************************************");
