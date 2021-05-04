@@ -125,7 +125,7 @@ public class MenuGame {
             System.err.println("                                    ONCE UPON A TIME");
             System.err.println("-----------------------------------------------------------------------------------------");
             System.err.println("");
-            System.err.println("               A long time ago a warrior named " + LeChoixDuName + " did a quest .... ");
+            System.err.println("               A long time ago a " + LeChoix + " named " + LeChoixDuName + " did a quest .... ");
             System.err.println("                     The great epic quest of 'The Digital Campus student' ...");
             System.err.println("");
             System.err.println("-----------------------------------------------------------------------------------------");

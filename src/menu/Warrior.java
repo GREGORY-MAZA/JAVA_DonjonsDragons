@@ -9,18 +9,16 @@ public class Warrior extends Character{
 
 //------------------------------------ CONSTRUCTORS ---------------------------------------
 
-    public Warrior() { super("Greg",5,8); }
+    public Warrior() { super("Greg",5,8,10,10); }
 
     public Warrior(String name) {
-        super(name,5,8);
+        super(name,5,8,10,10);
     }
 
-    public Warrior(String name,int health,int attack){
-        super(name,health, attack);
-    }
+    public Warrior(String name,int health,int attack,int healthMax, int attackMax){ super(name,health,attack,healthMax,attackMax);}
 
-    public Warrior(String name, int health, int attack, String weapon, String defense) {
-        super(name,health, attack);
+    public Warrior(String name, int health, int attack,int healthMax, int attackMax, String weapon, String defense) {
+        super(name,health, attack,healthMax,attackMax);
         this.weapon = weapon;
         this.defense = defense;
     }

@@ -7,16 +7,19 @@ public class Character {
     private String name;
     private int health;
     private int attack;
+    private int healthMax;
+    private int attackMax;
 
 
 
     //------------------------------------ CONSTRUCTORS ---------------------------------------
 
-    public Character(String name, int health, int attack) {
-
+    public Character(String name, int health, int attack,int healthMax,int attackMax) {
         this.name = name;
         this.health = health;
         this.attack = attack;
+        this.healthMax = healthMax;
+        this.attackMax = attackMax;
 
     }
 
@@ -42,7 +45,11 @@ public class Character {
         this.attack = attack;
     }
 
+    public int getHealthMax() { return healthMax; }
+    public void setHealthMax(int healthMax) { this.healthMax = healthMax; }
 
+    public int getAttackMax() { return attackMax; }
+    public void setAttackMax(int attackMax) { this.attackMax = attackMax; }
 
     //------------------------------------ FUNCTION TOSTRING  ------------------------------------------
 

@@ -10,19 +10,15 @@ public class Wizard extends Character{
     //------------------------------------ CONSTRUCTORS ---------------------------------------
 
     public Wizard() {
-        super("Greg",3,8);
+        super("Greg",3,8,6,15);
     }
-     public Wizard(String name) {
-        super(name,5,8);
+     public Wizard(String name) { super(name,5,8,6,15); }
 
-     }
-     public Wizard(String name, int health, int attack) {
-         super(name,health,attack);
-     }
+     public Wizard(String name, int health, int attack, int healthMax, int attackMax) { super(name,health,attack,healthMax,attackMax); }
 
 
-    public Wizard(String name, int health, int attack, String spell, String buff) {
-        super(name,health,attack);
+    public Wizard(String name, int health, int attack, int healthMax,int attackMax,String spell, String buff) {
+        super(name,health,attack,healthMax,attackMax);
         this.spell = spell;
         this.buff = buff;
     }
@@ -43,7 +39,7 @@ public class Wizard extends Character{
 
                 "     NICKNAME : " + getName() +
                         "     HEALTH POINT : " + getHealth() +
-                        "     STRENGTH : " + getAttack() +
+                        "     POWER : " + getAttack() +
                         "     SPELL ATTACK : " + spell +
                         "     BUFF ARMOR : " + buff;
     }
