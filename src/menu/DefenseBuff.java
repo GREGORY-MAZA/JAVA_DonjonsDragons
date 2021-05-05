@@ -2,23 +2,16 @@ package menu;
 
 //-------------------------------- DECLARATION ATTRIBUTES CLASS ---------------------------
 
-public class DefenseBuff {
+public class DefenseBuff extends ItemSkill {
 
-    private String name;
     private int protection;
 
     //------------------------------------ CONSTRUCTORS ---------------------------------------
 
-    public DefenseBuff(String name, int protection) {
-        this.name = name;
-        this.protection = protection;
-
-    }
+    public DefenseBuff(String name) { super(name); }
+    public DefenseBuff(int protection) { this.protection = protection; }
 
     //------------------------------------ GETTERS & SETTERS  ------------------------------------------
-
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
 
     public int getProtection() { return protection; }
     public void setProtection(int protection) { this.protection = protection; }
@@ -28,7 +21,7 @@ public class DefenseBuff {
     @Override
     public String toString() {
         return
-                "     ARMOR / BUFF : " + name +
+                "     ARMOR / BUFF : " + getName() +
                 "     DEFENSE : " + protection + " Points";
     }
 

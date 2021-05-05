@@ -2,35 +2,37 @@ package menu;
 
 //-------------------------------- DECLARATION ATTRIBUTES CLASS ---------------------------
 
-public class WeaponSpell {
+public class WeaponSpell extends ItemSkill {
 
-    private String name;
-    private int dammage;
+    private int damage;
 
     //------------------------------------ CONSTRUCTORS ---------------------------------------
 
-    public WeaponSpell(String name,int dammage) {
-        this.name = name;
-        this.dammage = dammage;
-
+    public WeaponSpell() {super("Greg") ;}
+    public WeaponSpell(String name) {
+        super(name);
     }
+    //public WeaponSpell(int damage) ;}
+    public WeaponSpell(String name, int damage) {
+        super(name,damage);
+        this.damage = damage;
+    }
+
+
 
     //------------------------------------ GETTERS & SETTERS  ------------------------------------------
 
+    public int getDamage() { return damage; }
+    public void setDamage(int damage) { this.damage = damage; }
 
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
-
-    public void setDammage(int dammage) { this.dammage = dammage; }
-    public int getDammage() { return dammage; }
 
     //------------------------------------ FUNCTION TOSTRING  ------------------------------------------
 
     @Override
     public String toString() {
         return
-                "     WEAPON / SPELL : " + name +
-                "     DAMAGE : " + dammage + " Points";
+                "     WEAPON / SPELL : " + getName() +
+                "     DAMAGE : " + damage + " Points";
     }
 
 

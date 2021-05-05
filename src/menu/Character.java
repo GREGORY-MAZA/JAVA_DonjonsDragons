@@ -2,7 +2,7 @@ package menu;
 
     //-------------------------------- DECLARATION ATTRIBUTES CLASS ---------------------------
 
-public class Character {
+public abstract class Character {
 
     private String name;
     private int health;

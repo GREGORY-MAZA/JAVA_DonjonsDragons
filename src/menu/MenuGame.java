@@ -3,22 +3,24 @@ package menu;
 import java.util.Scanner;
 
 public class MenuGame {
-    private Warrior HeroWarrior; //
-    private Wizard HeroWizard;
+
     private BoardGame HeroBoardGame;
     private DiceGame HeroDiceGame;
     private Tools tools = new Tools();
     private WeaponSpell HeroWeaponSpell;
     private DefenseBuff HeroDefenseBuff;
+    private Character HeroCharacter;
+    private ItemSkill HeroItemSkill;
 
 
     public MenuGame() {
-        HeroWarrior = null;
-        HeroWizard = null;
+
         HeroDiceGame = null;
         HeroBoardGame = null;
         HeroWeaponSpell = null;
         HeroDefenseBuff = null;
+        HeroCharacter = null;
+        HeroItemSkill = null;
 
 
     }
@@ -93,14 +95,12 @@ public class MenuGame {
         Tools.waitSec(1);
 
         if (LeChoix.equalsIgnoreCase("Warrior")) {
-            HeroWarrior = new Warrior(LeChoixDuName);
-            HeroWeaponSpell = new WeaponSpell("Sword", 5);
-            HeroDefenseBuff = new DefenseBuff("Shield", 5);
+            HeroCharacter = new Warrior(LeChoixDuName);
+            HeroCharacter.s
             System.out.println("_______________________________________________________________________________________________________________________");
             System.out.println("");
-            System.out.println(HeroWarrior.toString());
-            System.out.println(HeroWeaponSpell.toString());
-            System.out.println(HeroDefenseBuff.toString());
+            System.out.println(HeroItemSkill);
+            System.out.println(HeroCharacter.toString());
             System.out.println("");
             System.out.println("_______________________________________________________________________________________________________________________");
             System.out.println("");
@@ -109,12 +109,12 @@ public class MenuGame {
         }
 
         if (LeChoix.equalsIgnoreCase("Wizard")) {
-            HeroWizard = new Wizard(LeChoixDuName);
-            HeroWeaponSpell = new WeaponSpell("Wand", 8);
-            HeroDefenseBuff = new DefenseBuff("Protection Aura",5);
+            HeroCharacter = new Wizard(LeChoixDuName);
+            HeroItemSkill = new ItemSkill("Protection Aura");
+            System.out.println("");
             System.out.println("_______________________________________________________________________________________________________________________");
             System.out.println("");
-            System.out.println(HeroWizard.toString());
+            System.out.println(HeroCharacter.toString());
             System.out.println("");
             System.out.println(HeroWeaponSpell.toString());
             System.out.println(HeroDefenseBuff.toString());
