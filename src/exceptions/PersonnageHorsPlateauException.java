@@ -1,4 +1,4 @@
 package exceptions;
 
-public class PersonnageHorsPlateauException {
+public class PersonnageHorsPlateauException extends Exception {
 }

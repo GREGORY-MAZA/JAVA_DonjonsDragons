@@ -10,7 +10,7 @@ public class MenuGame {
     private Tools tools = new Tools();
 
 
-    public MenuGame(){
+    public MenuGame() {
         HeroWarrior = null;
         HeroWizard = null;
         HeroDiceGame = null;
@@ -18,6 +18,7 @@ public class MenuGame {
 
 
     }
+
     public void MenuChoixPerso() {
 
         String Wawa = "Warrior";
@@ -25,19 +26,19 @@ public class MenuGame {
 
 
         System.out.println("           ************************************************************");
-        System.out.println("* * * * * * *  If you want play a new adventure write " + Wawa + " or " +Wiwi + " * * * * * * *");
+        System.out.println("* * * * * * *  If you want play a new adventure write " + Wawa + " or " + Wiwi + " * * * * * * *");
         System.out.println("           ************************************************************");
 
         Scanner ChoixPerso = new Scanner(System.in); // Demander une Entré clavier
-        String LeChoix=ChoixPerso.nextLine(); // Récupère la chaine de caractere
+        String LeChoix = ChoixPerso.nextLine(); // Récupère la chaine de caractere
 
-        while ((!LeChoix.equalsIgnoreCase("Warrior")) && (!LeChoix.equalsIgnoreCase( "Wizard")) && (!LeChoix.equalsIgnoreCase("Stop"))) {
+        while ((!LeChoix.equalsIgnoreCase("Warrior")) && (!LeChoix.equalsIgnoreCase("Wizard")) && (!LeChoix.equalsIgnoreCase("Stop"))) {
 
             System.out.println("Please Choose Warrior or Wizard");
-            LeChoix=ChoixPerso.nextLine();
+            LeChoix = ChoixPerso.nextLine();
 
         }
-        if (LeChoix.equalsIgnoreCase("Stop")){
+        if (LeChoix.equalsIgnoreCase("Stop")) {
             Tools.StopGame();
         }
 
@@ -46,7 +47,7 @@ public class MenuGame {
         System.err.println("-----------------------------------------------------------------------------------------");
         System.out.println("______________________________________________");
         System.out.println("                                              |");
-        System.out.println("         Very nice choice " + LeChoix + " !       " );
+        System.out.println("         Very nice choice " + LeChoix + " !       ");
         System.out.println("                                              |");
         System.out.println("______________________________________________");
         System.out.println("");
@@ -56,10 +57,10 @@ public class MenuGame {
         System.err.println("-----------------------------------------------------------------------------------------");
         System.out.println("                             Choose your name " + LeChoix);
         Scanner ChoixName = new Scanner(System.in);
-        String LeChoixDuName=ChoixName.nextLine();
+        String LeChoixDuName = ChoixName.nextLine();
 
 
-        if (LeChoixDuName.equalsIgnoreCase("Stop")){
+        if (LeChoixDuName.equalsIgnoreCase("Stop")) {
             Tools.StopGame();
         }
 
@@ -87,7 +88,7 @@ public class MenuGame {
 
         Tools.waitSec(1);
 
-        if (LeChoix.equalsIgnoreCase("Warrior")){
+        if (LeChoix.equalsIgnoreCase("Warrior")) {
             HeroWarrior = new Warrior(LeChoixDuName);
             System.out.println("_______________________________________________________________________________________________________________________");
             System.out.println("");
@@ -99,7 +100,7 @@ public class MenuGame {
 
         }
 
-        if (LeChoix.equalsIgnoreCase("Wizard")){
+        if (LeChoix.equalsIgnoreCase("Wizard")) {
             HeroWizard = new Wizard(LeChoixDuName);
             System.out.println("_______________________________________________________________________________________________________________________");
             System.out.println("");
@@ -142,7 +143,7 @@ public class MenuGame {
                 System.out.println("                Do you want roll the dice ?      yes / no");
                 Scanner RepRerollDice = new Scanner(System.in);
                 String ChoiceRerollDice = RepRerollDice.nextLine();
-                if (ChoiceRerollDice.equalsIgnoreCase("yes")){
+                if (ChoiceRerollDice.equalsIgnoreCase("yes")) {
 
                     int repDice = Tools.RollTheDice();
                     //Tools.waitSec(1);
@@ -150,16 +151,17 @@ public class MenuGame {
                     //Tools.waitSec(1);
 
                 }
-                if (ChoiceRerollDice.equalsIgnoreCase("no")){
+                if (ChoiceRerollDice.equalsIgnoreCase("no")) {
                     Tools.StopGame();
                 }
             }
 
 
-        if (RepStartNewGame.equalsIgnoreCase("no")){
-            Tools.StopGame();
-        }
-        if (HeroBoardGame.getSquarePlayer()>=64);
+            if (RepStartNewGame.equalsIgnoreCase("no")) {
+                Tools.StopGame();
+            }
+
+            if (HeroBoardGame.getSquarePlayer() >= 64) ;
             HeroBoardGame.setSquarePlayer(64);
             System.out.println("Congratulation ! You Win " + LeChoixDuName);
             System.out.println("");
@@ -173,7 +175,7 @@ public class MenuGame {
             System.err.println("       **          **      **  **              **         **     ****    **       **                ");
             System.err.println("       **          **      **  ***********     *********  **      ***   *********                         ");
 
-    }
+        }
 
-}
+    }
 }
