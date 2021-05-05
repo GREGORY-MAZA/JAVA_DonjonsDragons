@@ -28,8 +28,8 @@ public class DefenseBuff {
     @Override
     public String toString() {
         return
-                "ARMOR / BUFF : " + name +
-                "DEFENSE : " + protection + " Points";
+                "     ARMOR / BUFF : " + name +
+                "     DEFENSE : " + protection + " Points";
     }
 
 

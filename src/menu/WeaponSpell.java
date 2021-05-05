@@ -29,8 +29,8 @@ public class WeaponSpell {
     @Override
     public String toString() {
         return
-                "WEAPON / SPELL : " + name +
-                "DAMAGE : " + dammage + " Points";
+                "     WEAPON / SPELL : " + name +
+                "     DAMAGE : " + dammage + " Points";
     }
 
 

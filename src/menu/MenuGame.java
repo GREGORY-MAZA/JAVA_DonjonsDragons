@@ -8,6 +8,8 @@ public class MenuGame {
     private BoardGame HeroBoardGame;
     private DiceGame HeroDiceGame;
     private Tools tools = new Tools();
+    private WeaponSpell HeroWeaponSpell;
+    private DefenseBuff HeroDefenseBuff;
 
 
     public MenuGame() {
@@ -15,6 +17,8 @@ public class MenuGame {
         HeroWizard = null;
         HeroDiceGame = null;
         HeroBoardGame = null;
+        HeroWeaponSpell = null;
+        HeroDefenseBuff = null;
 
 
     }
@@ -90,9 +94,13 @@ public class MenuGame {
 
         if (LeChoix.equalsIgnoreCase("Warrior")) {
             HeroWarrior = new Warrior(LeChoixDuName);
+            HeroWeaponSpell = new WeaponSpell("Sword", 5);
+            HeroDefenseBuff = new DefenseBuff("Shield", 5);
             System.out.println("_______________________________________________________________________________________________________________________");
             System.out.println("");
             System.out.println(HeroWarrior.toString());
+            System.out.println(HeroWeaponSpell.toString());
+            System.out.println(HeroDefenseBuff.toString());
             System.out.println("");
             System.out.println("_______________________________________________________________________________________________________________________");
             System.out.println("");
@@ -102,9 +110,14 @@ public class MenuGame {
 
         if (LeChoix.equalsIgnoreCase("Wizard")) {
             HeroWizard = new Wizard(LeChoixDuName);
+            HeroWeaponSpell = new WeaponSpell("Wand", 8);
+            HeroDefenseBuff = new DefenseBuff("Protection Aura",5);
             System.out.println("_______________________________________________________________________________________________________________________");
             System.out.println("");
             System.out.println(HeroWizard.toString());
+            System.out.println("");
+            System.out.println(HeroWeaponSpell.toString());
+            System.out.println(HeroDefenseBuff.toString());
             System.out.println("");
             System.out.println("_______________________________________________________________________________________________________________________");
         }
