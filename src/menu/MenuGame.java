@@ -160,7 +160,7 @@ public class MenuGame {
             Tools.StopGame();
         }
         if (HeroBoardGame.getSquarePlayer()>=64);
-
+            HeroBoardGame.setSquarePlayer(64);
             System.out.println("Congratulation ! You Win " + LeChoixDuName);
             System.out.println("");
             Tools.waitSec(2);
