@@ -1,6 +1,7 @@
 package menu;
 
 import javax.swing.*;
+import menu.MenuGame;
 
 public class Tools {
 
@@ -26,20 +27,22 @@ public class Tools {
 
     public static void StopGame() {
 
-        System.out.println("_________________________________________________________________________________________");
+        System.out.println("          _________________________________________________________________________________________");
         System.out.println(" ");
-        System.out.println("                        You can come back later My friend.....");
+        System.out.println("                                  You can come back later My friend.....");
         System.out.println(" ");
-        System.out.println("_________________________________________________________________________________________");
+        System.out.println("          _________________________________________________________________________________________");
         System.exit(0);
     }
 
     public static int RollTheDice() {
        int DiceGameFace = (int) (Math.random()*6 + 1);
-        System.err.println("==========================================================================");
+        System.err.println("          ==========================================================================");
         System.err.println("                             You roll the dice ! : " + DiceGameFace);
-        System.err.println("==========================================================================");
+        System.err.println("          ==========================================================================");
         return DiceGameFace;
     }
+
+
 
 }

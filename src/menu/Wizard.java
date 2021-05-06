@@ -37,11 +37,9 @@ public class Wizard extends Character{
     public String toString() {
         return
 
-                "     NICKNAME : " + getName() +
-                        "     HEALTH POINT : " + getHealth() +
-                        "     POWER : " + getAttack() +
-                        "     SPELL ATTACK : " + spell +
-                        "     BUFF ARMOR : " + buff;
+                "                 NICKNAME : " + getName() +
+                        "                 HEALTH POINT : " + getHealth() +
+                        "                 STRENGTH : " + getAttack();
     }
 }
 

@@ -4,8 +4,8 @@ package menu;
 
 public class Warrior extends Character {
 
-    public WeaponSpell weapon;
-    public DefenseBuff defense;
+    private Weapon weapon;
+    private Defense defense;
 
 //------------------------------------ CONSTRUCTORS ---------------------------------------
 
@@ -19,7 +19,7 @@ public class Warrior extends Character {
 
     public Warrior(String name,int health,int attack,int healthMax, int attackMax){ super(name,health,attack,healthMax,attackMax);}
 
-    public Warrior(String name, int health, int attack,int healthMax, int attackMax, WeaponSpell weapon, DefenseBuff defense) {
+    public Warrior(String name, int health, int attack, int healthMax, int attackMax, Weapon weapon, Defense defense) {
         super(name,health, attack,healthMax,attackMax);
         this.weapon = weapon;
         this.defense = defense;
@@ -28,11 +28,11 @@ public class Warrior extends Character {
 //------------------------------------ GETTERS & SETTERS  ------------------------------------------
 
 
-    public WeaponSpell getWeapon() { return weapon;}
-    public void setWeapon (WeaponSpell weapon) { this.weapon = weapon;}
+    public Weapon getWeapon() { return weapon;}
+    public void setWeapon (Weapon weapon) { this.weapon = weapon;}
 
-    public DefenseBuff getDefense() { return defense;}
-    public void setDefense (DefenseBuff defense) { this.defense = defense;}
+    public Defense getDefense() { return defense;}
+    public void setDefense (Defense defense) { this.defense = defense;}
 
 
 //------------------------------------ FUNCTION TOSTRING  ------------------------------------------
@@ -41,11 +41,9 @@ public class Warrior extends Character {
     public String toString() {
         return
 
-                "     NICKNAME : " + getName() +
-                "     HEALTH POINT : " + getHealth() +
-                "     STRENGTH : " + getAttack() +
-                "     ATTACK ITEM : " + weapon +
-                "     SHIELD ITEM : " + defense;
+                "                 NICKNAME : " + getName() +
+                "                 HEALTH POINT : " + getHealth() +
+                "                 STRENGTH : " + getAttack();
     }
 
     //------------------------------------ END  ------------------------------------------
