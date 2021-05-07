@@ -37,7 +37,7 @@ public class ChestCase extends Case {
 
     @Override
     public void action(Character player) {
-        // greg //
+
     }
 
 //---------------------------END--------------------------------------
