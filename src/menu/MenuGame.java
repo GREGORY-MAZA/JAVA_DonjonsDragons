@@ -1,5 +1,7 @@
 package menu;
 
+import java.util.Collections;
+import java.util.Random;
 import java.util.Scanner;
 
 public class MenuGame {
@@ -132,7 +134,6 @@ public class MenuGame {
         String RepStartNewGame = StartNewGame.nextLine();
 
         if (RepStartNewGame.equalsIgnoreCase("yes")) {
-            HeroBoardGame = new BoardGame(1);
 
             System.err.println("          -----------------------------------------------------------------------------------------");
             System.err.println("                                              ONCE UPON A TIME");
@@ -147,10 +148,11 @@ public class MenuGame {
             //System.out.println("It's time to roll the dice....    " + LeChoixDuName );
             System.out.println("");
             HeroDiceGame = new DiceGame(0);
-            HeroBoardGame = new BoardGame(1);
+            HeroBoardGame = new BoardGame();
+            Collections.shuffle(HeroBoardGame.getLeNomDeLaListe(), new Random());
 
-            while (HeroBoardGame.getSquarePlayer() < 64) {
-                System.out.println(HeroBoardGame);
+            while (HeroBoardGame.getIndex() < 64) {
+                System.out.println(HeroBoardGame.toString());
                 System.out.println("");
                 System.out.println("                          Do you want roll the dice ?      yes / no");
                 Scanner RepRerollDice = new Scanner(System.in);
@@ -158,9 +160,9 @@ public class MenuGame {
                 if (ChoiceRerollDice.equalsIgnoreCase("yes")) {
 
                     int repDice = Tools.RollTheDice();
-                    //Tools.waitSec(1);
-                    HeroBoardGame.setSquarePlayer(HeroBoardGame.getSquarePlayer() + repDice);
-                    //Tools.waitSec(1);
+                    HeroBoardGame.setIndex(HeroBoardGame.getIndex() + repDice);
+                    System.out.println(HeroBoardGame.getLeNomDeLaListe().get(HeroBoardGame.getIndex()).getDescription());
+                    HeroBoardGame.getLeNomDeLaListe().get(HeroBoardGame.getIndex()).action(HeroCharacter);
 
                 }
                 if (ChoiceRerollDice.equalsIgnoreCase("no")) {
@@ -173,8 +175,8 @@ public class MenuGame {
                 Tools.StopGame();
             }
 
-            if (HeroBoardGame.getSquarePlayer() >= 64) ;
-            HeroBoardGame.setSquarePlayer(64);
+            if (HeroBoardGame.getIndex() >= 64) ;
+            HeroBoardGame.setIndex(64);
             System.out.println("          Congratulation ! You Win " + LeChoixDuName);
             System.out.println("");
             Tools.waitSec(2);

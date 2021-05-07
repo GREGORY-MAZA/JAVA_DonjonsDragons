@@ -2,6 +2,75 @@ package menu;
 
 //-------------------------------- DECLARATION ATTRIBUTES CLASS ---------------------------
 
+import cases.Case;
+import cases.ChestCase;
+import cases.EmptyCase;
+import cases.EnemyCase;
+import mobs.Dragon;
+import mobs.Enemy;
+import mobs.Gobelin;
+import mobs.Orc;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class BoardGame {
+    private List<Case> leNomDeLaListe = new ArrayList<Case>();
+    private int index =0;
+
+
+    //------------------------------------ CONSTRUCTORS ---------------------------------------
+
+    public BoardGame(){
+        for (int i = 0 ; i < 4; i++){
+            leNomDeLaListe.add(new EnemyCase(new Dragon()));
+        }
+        for (int i = 0 ; i < 10; i++){
+            leNomDeLaListe.add(new EnemyCase(new Orc()));
+        }
+        for (int i = 0 ; i < 10; i++){
+            leNomDeLaListe.add(new EnemyCase(new Gobelin()));
+        }
+        for (int i = 0 ; i <9; i++){
+            leNomDeLaListe.add(new ChestCase(new Weapon()));
+        }
+        for (int i = 0 ; i < 7; i++){
+            leNomDeLaListe.add(new ChestCase(new Spell()));
+        }
+        for (int i = 0 ; i < 8; i++){
+            leNomDeLaListe.add(new ChestCase(new Buff()));
+        }
+        for (int i = 0 ; i < 8; i++){
+            leNomDeLaListe.add(new ChestCase(new Defense()));
+        }
+        for (int i = 0 ; i <8 ; i++){
+            leNomDeLaListe.add(new EmptyCase());
+        }
+    }
+
+    //------------------------------------ GETTERS & SETTERS  ------------------------------------------
+
+    public List<Case> getLeNomDeLaListe() { return leNomDeLaListe; }
+
+    public int getIndex() { return index; }
+
+    public void setIndex(int index) {
+        this.index = index;
+    }
+
+    //------------------------------------ FUNCTION TOSTRING  ------------------------------------------
+
+    @Override
+    public String toString() {
+        return "                         You are on the square number : "+ index;
+    }
+
+
+
+
+    /*
+//-------------------------------- DECLARATION ATTRIBUTES CLASS ---------------------------
+
 public class BoardGame {
 
     private int squarePlayer;
@@ -59,4 +128,8 @@ public class BoardGame {
     public String toString() {
         return "                         You are on the square number : "+ squarePlayer;
     }
+
+ */
+    //------------------------------------------ END
+
 }
