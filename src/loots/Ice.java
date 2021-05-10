@@ -2,6 +2,9 @@ package loots;
 
 //-------------------------------- DECLARATION ATTRIBUTES CLASS ---------------------------
 
+import menu.Character;
+import menu.Wizard;
+
 public class Ice extends Item {
 
     //------------------------------------ CONSTRUCTORS ---------------------------------------
@@ -14,6 +17,14 @@ public class Ice extends Item {
 
     //------------------------------------ FUNCTION TOSTRING  ------------------------------------------
 
+    public void action(Character player){
+        // add points attack
+        if (player instanceof Wizard){
+            int attack = (getAttackBonus() + player.getAttack());
+            player.setAttack(attack);
+        }
+
+    }
 
     //-----------------------------------  END ----------------------------------
 }

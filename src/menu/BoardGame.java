@@ -6,6 +6,10 @@ import cases.Case;
 import cases.ChestCase;
 import cases.EmptyCase;
 import cases.EnemyCase;
+import loots.Axe;
+import loots.Buff;
+import loots.Fire;
+import loots.Shield;
 import mobs.Dragon;
 import mobs.Enemy;
 import mobs.Gobelin;
@@ -32,16 +36,16 @@ public class BoardGame {
             leNomDeLaListe.add(new EnemyCase(new Gobelin()));
         }
         for (int i = 0 ; i <9; i++){
-            leNomDeLaListe.add(new ChestCase(new Weapon()));
+            leNomDeLaListe.add(new ChestCase(new Axe()));
         }
         for (int i = 0 ; i < 7; i++){
-            leNomDeLaListe.add(new ChestCase(new Spell()));
+            leNomDeLaListe.add(new ChestCase(new Fire()));
         }
         for (int i = 0 ; i < 8; i++){
             leNomDeLaListe.add(new ChestCase(new Buff()));
         }
         for (int i = 0 ; i < 8; i++){
-            leNomDeLaListe.add(new ChestCase(new Defense()));
+            leNomDeLaListe.add(new ChestCase(new Shield()));
         }
         for (int i = 0 ; i <8 ; i++){
             leNomDeLaListe.add(new EmptyCase());

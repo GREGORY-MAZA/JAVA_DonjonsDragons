@@ -1,4 +1,4 @@
-package menu;
+/*package menu;
 
 //-------------------------------- DECLARATION ATTRIBUTES CLASS ---------------------------
 
@@ -33,7 +33,7 @@ public class Defense extends ItemSkill {
     }*/
 
     //------------------------------------ FUNCTION TOSTRING  ------------------------------------------
-
+/*
     @Override
     public String toString() {
         return
@@ -44,3 +44,4 @@ public class Defense extends ItemSkill {
 
     //------------------------------------ END ---------------------------------------
 }
+*/

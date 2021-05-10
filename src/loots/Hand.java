@@ -3,13 +3,15 @@ package loots;
 //-------------------------------- DECLARATION ATTRIBUTES CLASS ---------------------------
 
 import menu.Character;
-import menu.Wizard;
+//import menu.ItemSkill;
+import menu.Warrior;
+import loots.Item;
 
-public class Buff extends Item {
+public class Hand extends Item {
 
     //------------------------------------ CONSTRUCTORS ---------------------------------------
 
-    public Buff() { super("Buff of Spirit",0,0,3); }
+    public Hand() { super("Hand",0,0,0); }
 
 
     //------------------------------------ GETTERS & SETTERS  ------------------------------------------
@@ -17,13 +19,7 @@ public class Buff extends Item {
 
     //------------------------------------ FUNCTION TOSTRING  ------------------------------------------
 
-    public void action(Character player){
-        // add points protect
-        if (player instanceof Wizard){
-            int protect = (getProtectBonus() + player.getProtect());
-            player.setProtect(protect);
-        }
-
+    public void action(Character player) {
     }
 
     //-----------------------------------  END ----------------------------------

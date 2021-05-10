@@ -1,4 +1,4 @@
-package menu;
+/*package menu;
 
 //-------------------------------- DECLARATION ATTRIBUTES CLASS ---------------------------
 
@@ -36,7 +36,7 @@ public class Weapon extends ItemSkill {
 */
     //------------------------------------ FUNCTION TOSTRING  ------------------------------------------
 
-    @Override
+ /*   @Override
     public String toString() {
         return
                         "                               WEAPON : " + getName() +
@@ -45,4 +45,4 @@ public class Weapon extends ItemSkill {
 
 
     //------------------------- END -------------------------------------
-}
+}*/

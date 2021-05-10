@@ -2,37 +2,39 @@ package menu;
 
 //-------------------------------- DECLARATION ATTRIBUTES CLASS ---------------------------
 
+import loots.Item;
+
 public class Warrior extends Character {
 
-    private Weapon weapon;
-    private Defense defense;
+    private Item itemWeapon;
+    private Item itemDefense;
 
 //------------------------------------ CONSTRUCTORS ---------------------------------------
 
-    public Warrior() { super("Greg",5,8,10,10); }
+    public Warrior() { super("Greg",5,8,0,10,10); }
 
     public Warrior(String name) {
-        super(name,5,8,10,10);
-        this.weapon = null;
-        this.defense = null;
+        super(name,5,8,0,10,10);
+        this.itemWeapon = null;
+        this.itemDefense = null;
     }
 
-    public Warrior(String name,int health,int attack,int healthMax, int attackMax){ super(name,health,attack,healthMax,attackMax);}
+    public Warrior(String name,int health,int attack,int protect ,int healthMax, int attackMax){ super(name,health,attack,protect,healthMax,attackMax);}
 
-    public Warrior(String name, int health, int attack, int healthMax, int attackMax, Weapon weapon, Defense defense) {
-        super(name,health, attack,healthMax,attackMax);
-        this.weapon = weapon;
-        this.defense = defense;
+    public Warrior(String name, int health, int attack, int protect, int healthMax, int attackMax, Item itemWeapon, Item itemDefense) {
+        super(name,health, attack,protect,healthMax,attackMax);
+        this.itemWeapon = itemWeapon;
+        this.itemDefense = itemDefense;
     }
 
 //------------------------------------ GETTERS & SETTERS  ------------------------------------------
 
 
-    public Weapon getWeapon() { return weapon;}
-    public void setWeapon (Weapon weapon) { this.weapon = weapon;}
+    public Item getItemWeapon() { return itemWeapon;}
+    public void setItemWeapon(Item itemWeapon) { this.itemWeapon = itemWeapon;}
 
-    public Defense getDefense() { return defense;}
-    public void setDefense (Defense defense) { this.defense = defense;}
+    public Item getItemDefense() { return itemDefense;}
+    public void setItemDefense(Item itemDefense) { this.itemDefense = itemDefense;}
 
 
 //------------------------------------ FUNCTION TOSTRING  ------------------------------------------
@@ -43,7 +45,8 @@ public class Warrior extends Character {
 
                 "                 NICKNAME : " + getName() +
                 "                 HEALTH POINT : " + getHealth() +
-                "                 STRENGTH : " + getAttack();
+                "                 STRENGTH : " + getAttack() +
+                "                 ARMOR : " + getProtect();
     }
 
     //------------------------------------ END  ------------------------------------------

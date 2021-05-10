@@ -2,6 +2,8 @@ package loots;
 
 //-------------------------------- DECLARATION ATTRIBUTES CLASS ---------------------------
 
+import menu.Character;
+
 public class Potion extends Item {
 
     //------------------------------------ CONSTRUCTORS ---------------------------------------
@@ -14,6 +16,12 @@ public class Potion extends Item {
 
     //------------------------------------ FUNCTION TOSTRING  ------------------------------------------
 
+    public void action(Character player){
+        // add points Health
+
+        int health = (getHealthBonus() + player.getHealth());
+        player.setHealth(health);
+    }
 
     //-----------------------------------  END ----------------------------------
 }

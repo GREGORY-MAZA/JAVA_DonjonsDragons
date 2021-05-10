@@ -18,7 +18,7 @@ public class EnemyCase extends Case {
 
     @Override
     public void action(Character player) {
-        // greg/ /
+        System.out.println("Je tombe sur un enemy : " + enemyType.getName());
     }
 
 }

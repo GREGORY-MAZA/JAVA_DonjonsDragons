@@ -4,33 +4,33 @@ package menu;
 
 public class Wizard extends Character{
 
-    private String spell;
-    private String buff;
+    private String itemSpell;
+    private String itemBuff;
 
     //------------------------------------ CONSTRUCTORS ---------------------------------------
 
     public Wizard() {
-        super("Greg",3,8,6,15);
+        super("Greg",3,8,0,6,15);
     }
-     public Wizard(String name) { super(name,5,8,6,15); }
+     public Wizard(String name) { super(name,5,8,0,6,15); }
 
-     public Wizard(String name, int health, int attack, int healthMax, int attackMax) { super(name,health,attack,healthMax,attackMax); }
+     public Wizard(String name, int health, int attack,int protect, int healthMax, int attackMax) { super(name,health,attack,protect,healthMax,attackMax); }
 
 
-    public Wizard(String name, int health, int attack, int healthMax,int attackMax,String spell, String buff) {
-        super(name,health,attack,healthMax,attackMax);
-        this.spell = spell;
-        this.buff = buff;
+    public Wizard(String name, int health, int attack, int protect, int healthMax, int attackMax, String itemSpell, String itemBuff) {
+        super(name,health,attack,protect,healthMax,attackMax);
+        this.itemSpell = itemSpell;
+        this.itemBuff = itemBuff;
     }
 
 //------------------------------------ GETTERS & SETTERS  ------------------------------------------
 
 
-    public String getSpell() { return spell;}
-    public void setSpell (String weapon) { this.spell = weapon;}
+    public String getItemSpell() { return itemSpell;}
+    public void setItemSpell(String weapon) { this.itemSpell = weapon;}
 
-    public String getBuff() { return buff;}
-    public void setBuff (String buff) { this.buff = buff;}
+    public String getItemBuff() { return itemBuff;}
+    public void setItemBuff(String itemBuff) { this.itemBuff = itemBuff;}
 
     //------------------------------------ FUNCTION TOSTRING  ------------------------------------------
 
@@ -39,7 +39,8 @@ public class Wizard extends Character{
 
                 "                 NICKNAME : " + getName() +
                         "                 HEALTH POINT : " + getHealth() +
-                        "                 STRENGTH : " + getAttack();
+                        "                 SPIRIT : " + getAttack() +
+                        "                 ARMOR : " + getProtect();
     }
 }
 

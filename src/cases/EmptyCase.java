@@ -12,7 +12,7 @@ public class EmptyCase extends Case {
 
     @Override
     public void action(Character player) {
-
+        System.out.println("ha bah rien");
     }
 
 

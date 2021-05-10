@@ -1,4 +1,4 @@
-package menu;
+/*package menu;
 
 //-------------------------------- DECLARATION ATTRIBUTES CLASS ---------------------------
 
@@ -33,7 +33,7 @@ public class Spell extends ItemSkill {
     }*/
 
     //------------------------------------ FUNCTION TOSTRING  ------------------------------------------
-
+/*
     @Override
     public String toString() {
         return
@@ -43,4 +43,6 @@ public class Spell extends ItemSkill {
 
 
     //------------------------------------ END ---------------------------------------
+
 }
+*/

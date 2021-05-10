@@ -2,6 +2,9 @@ package loots;
 
 //-------------------------------- DECLARATION ATTRIBUTES CLASS ---------------------------
 
+import menu.Character;
+import menu.Warrior;
+
 public class Sword extends Item {
 
     //------------------------------------ CONSTRUCTORS ---------------------------------------
@@ -14,6 +17,14 @@ public class Sword extends Item {
 
     //------------------------------------ FUNCTION TOSTRING  ------------------------------------------
 
+    public void action(Character player) {
+        // add points attack
+        if (player instanceof Warrior) {
+            int attack = (getAttackBonus() + player.getAttack());
+            player.setAttack(attack);
+        }
+
+    }
 
     //-----------------------------------  END ----------------------------------
 }

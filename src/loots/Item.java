@@ -2,6 +2,8 @@ package loots;
 
 //-------------------------------- DECLARATION ATTRIBUTES CLASS ---------------------------
 
+import menu.Character;
+
 public abstract class Item {
 
     private String name;
@@ -57,11 +59,13 @@ public abstract class Item {
     public String toString() {
         return
 
-                        "     Item : " + name +
-                        "     ATTACK BONUS : " + attackBonus +
-                        "     PROTECT BONUS : " + protectBonus +
-                        "     HEALTH BONUS :  " + healthBonus;
+                        "          -=[ ITEM ]=- : " + getName() +
+                        "          -=[ ATTACK BONUS ]=- : " + attackBonus +
+                        "          -=[ PROTECT BONUS ]=- : " + protectBonus +
+                        "          -=[ HEALTH BONUS ]=- :  " + healthBonus;
     }
+
+    public abstract void action(Character player);
 
     //-------------------------------------  END  ---------------------------------------------
 }

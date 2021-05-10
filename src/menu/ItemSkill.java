@@ -1,4 +1,4 @@
-package menu;
+/*package menu;
 
 //-------------------------------- DECLARATION ATTRIBUTES CLASS ---------------------------
 
@@ -48,3 +48,4 @@ public abstract class ItemSkill {
 
     //------------------------------------ END ---------------------------------------
 }
+*/
