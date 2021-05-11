@@ -2,10 +2,12 @@ package cases;
 
 //-------------------------------- DECLARATION ATTRIBUTES CLASS ---------------------------
 
+import loots.Axe;
 import loots.Item;
 import menu.*;
 import menu.Character;
 import mobs.Enemy;
+import menu.BoardGame;
 
 public class ChestCase extends Case {
 
@@ -44,8 +46,7 @@ public class ChestCase extends Case {
     @Override
     public void action(Character player) {
         System.out.println("super un coffre " + item.getName());
-        //item.action(player);
-
+        item.action(player);
     }
 
 //---------------------------END--------------------------------------

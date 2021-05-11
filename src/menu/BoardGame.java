@@ -27,13 +27,13 @@ public class BoardGame {
 
     public BoardGame(){
         for (int i = 0 ; i < 4; i++){
-            leNomDeLaListe.add(new EnemyCase(new Dragon()));
+            leNomDeLaListe.add(new ChestCase(new Axe()));
         }
         for (int i = 0 ; i < 10; i++){
-            leNomDeLaListe.add(new EnemyCase(new Orc()));
+            leNomDeLaListe.add(new ChestCase(new Axe()));
         }
         for (int i = 0 ; i < 10; i++){
-            leNomDeLaListe.add(new EnemyCase(new Gobelin()));
+            leNomDeLaListe.add(new ChestCase(new Axe()));
         }
         for (int i = 0 ; i <9; i++){
             leNomDeLaListe.add(new ChestCase(new Axe()));

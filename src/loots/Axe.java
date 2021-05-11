@@ -8,6 +8,7 @@ import menu.Character;
 import menu.Warrior;
 //import menu.Weapon;
 import loots.Item;
+import menu.MenuGame;
 
 public class Axe extends Item {
 
@@ -24,17 +25,18 @@ public class Axe extends Item {
     public void action(Character player) {
         // add points attack
         if (player instanceof Warrior) {
-            int attack = (getAttackBonus() + player.getAttack());
+            /*int attack = (getAttackBonus() + player.getAttack());
             String itemName = getName();
-            player.setAttack(attack);
-            ((Warrior) player).setItemWeapon(new Axe());
-            toString();
+            player.setAttack(attack);*/
+            player.setAttackHand(this);
 
 
-            System.out.println(" ====================    Beautiful ! new item for you : " + itemName + "    ====================");
+
+
+            /*System.out.println(" ====================    Beautiful ! new item for you : " + itemName + "    ====================");
             System.out.println("");
             System.out.println(" --------------------        Your STRENGTH is now : " +attack + "     --------------------");
-            System.out.println("");
+            System.out.println("");*/
         }
     }
     //-----------------------------------  END ----------------------------------

@@ -2,6 +2,8 @@ package menu;
 
     //-------------------------------- DECLARATION ATTRIBUTES CLASS ---------------------------
 
+import loots.Item;
+
 public abstract class Character {
 
     private String name;
@@ -10,18 +12,25 @@ public abstract class Character {
     private int protect;
     private int healthMax;
     private int attackMax;
+    private Item attackHand;
+    private Item defenseHand;
 
 
 
     //------------------------------------ CONSTRUCTORS ---------------------------------------
 
-    public Character(String name, int health, int attack,int protect, int healthMax,int attackMax) {
+
+
+
+    public Character(String name, int health, int attack,int protect, int healthMax,int attackMax,Item attackHand, Item defenseHand ) {
         this.name = name;
         this.health = health;
         this.attack = attack;
         this.protect = protect;
         this.healthMax = healthMax;
         this.attackMax = attackMax;
+        this.attackHand = attackHand;
+        this.defenseHand = defenseHand;
 
     }
 
@@ -55,6 +64,17 @@ public abstract class Character {
 
     public int getAttackMax() { return attackMax; }
     public void setAttackMax(int attackMax) { this.attackMax = attackMax; }
+
+    public Item getAttackHand() { return attackHand; }
+
+    public void setAttackHand(Item attackHand) {
+        this.attackHand = attackHand;
+        this.attack += attackHand.getAttackBonus();
+        // todo verify max attack
+    }
+
+    public Item getDefenseHand() { return defenseHand; }
+    public void setDefenseHand(Item defenseHand) { this.defenseHand = defenseHand; }
 
     //------------------------------------ FUNCTION TOSTRING  ------------------------------------------
 

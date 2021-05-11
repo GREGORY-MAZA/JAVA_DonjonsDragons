@@ -13,8 +13,8 @@ public class MenuGame {
     private BoardGame HeroBoardGame;
     private DiceGame HeroDiceGame;
     private Tools tools = new Tools();
-    private Item HeroWeapon;
-    private Item HeroArmor;
+    /*private Item HeroWeapon;
+    private Item HeroArmor;*/
     //private Spell HeroSpell;
     //private Defense HeroDefense;
     private Item HeroBuff;
@@ -27,8 +27,8 @@ public class MenuGame {
 
         HeroDiceGame = null;
         HeroBoardGame = null;
-        HeroWeapon = null;
-        HeroArmor = null;
+        /*HeroWeapon = null;
+        HeroArmor = null;*/
         //HeroSpell = null;
         //HeroDefense = null;
         HeroBuff = null;
@@ -99,49 +99,26 @@ public class MenuGame {
 
         if (LeChoix.equalsIgnoreCase("Warrior")) {
             HeroCharacter = new Warrior(LeChoixDuName);
-            HeroWeapon = new Hand();
-            HeroArmor = new Hand();
-            System.out.println("          _______________________________________________________________________________________________________________________");
-            System.out.println("");
-            System.out.println(HeroCharacter.toString());
-            System.out.println("");
-            System.out.println("");
-            System.out.println("");
-            System.out.println("                                                     -----===== RIGHT HAND =====-----");
-            System.out.println(" ");
-            System.out.println(HeroWeapon.toString());
-            System.out.println("");
-            System.out.println("                                                     -----===== LEFT  HAND =====-----");
-            System.out.println(" ");
-            System.out.println(HeroArmor.toString());
-            System.out.println("");
-            System.out.println("          _______________________________________________________________________________________________________________________");
-            System.out.println("");
-            System.out.println("");
-
         }
-
         if (LeChoix.equalsIgnoreCase("Wizard")) {
             HeroCharacter = new Wizard(LeChoixDuName);
-            HeroWeapon = new Hand();
-            HeroArmor = new Hand();
-            System.out.println("");
-            System.out.println("          _______________________________________________________________________________________________________________________");
-            System.out.println("");
-            System.out.println(HeroCharacter.toString());
-            System.out.println(" ");
-            System.out.println("");
-            System.out.println("");
-            System.out.println("                                                     -----===== RIGHT HAND =====-----");
-            System.out.println(" ");
-            System.out.println(HeroWeapon.toString());
-            System.out.println("");
-            System.out.println("                                                     -----===== LEFT  HAND =====-----");
-            System.out.println(" ");
-            System.out.println(HeroArmor.toString());
-            System.out.println("");
-            System.out.println("          _______________________________________________________________________________________________________________________");
         }
+
+        System.out.println(HeroCharacter.toString());
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("                                                     -----===== RIGHT HAND =====-----");
+        System.out.println(" ");
+        System.out.println(HeroCharacter.getAttackHand().toString());
+        System.out.println("");
+        System.out.println("                                                     -----===== LEFT  HAND =====-----");
+        System.out.println(" ");
+        System.out.println(HeroCharacter.getDefenseHand().toString());
+        System.out.println("");
+        System.out.println("          _______________________________________________________________________________________________________________________");
+        System.out.println("");
+        System.out.println("");
 
         System.err.println("                       -----------------------------------------------------------------------------------------");
         System.err.println("                                                       Start a new game ?");
@@ -183,11 +160,11 @@ public class MenuGame {
                     HeroCase.action(HeroCharacter);
                     System.out.println(HeroCharacter.toString());
                     System.out.println("");
-                    System.out.println(HeroWeapon.toString());
-                    System.out.println(HeroArmor.toString());
+                    System.out.println(HeroCharacter.getAttackHand().toString());
+                    System.out.println(HeroCharacter.getDefenseHand().toString());
                     System.out.println("");
-                   // System.out.println(HeroBoardGame.getLeNomDeLaListe().get(HeroBoardGame.getIndex()).getDescription());
-                    //HeroBoardGame.getLeNomDeLaListe().get(HeroBoardGame.getIndex()).action(HeroCharacter);
+                    System.out.println(HeroBoardGame.getLeNomDeLaListe().get(HeroBoardGame.getIndex()).getDescription());
+                    HeroBoardGame.getLeNomDeLaListe().get(HeroBoardGame.getIndex()).action(HeroCharacter);
 
                 }
                 if (ChoiceRerollDice.equalsIgnoreCase("no")) {
