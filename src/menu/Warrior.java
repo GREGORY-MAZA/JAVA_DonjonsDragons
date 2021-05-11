@@ -17,7 +17,7 @@ public class Warrior extends Character {
     //public Warrior() { super("Greg",5,8,0,10,10); }
 
     public Warrior(String name) {
-        super(name,5,8,0,10,10,new Hand(),new Hand());
+        super(name,5,8,0,10,10,new Hand(),new Hand(),5,8,0);
         //this.itemWeapon = null;
         //this.itemDefense = null;
     }

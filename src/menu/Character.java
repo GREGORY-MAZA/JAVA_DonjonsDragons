@@ -14,12 +14,16 @@ public abstract class Character {
     private int attackMax;
     private Item attackHand;
     private Item defenseHand;
+    private int defaultHealth;
+    private int defaultAttack;
+    private int defaultProtect;
 
 
     //------------------------------------ CONSTRUCTORS ---------------------------------------
 
 
-    public Character(String name, int health, int attack, int protect, int healthMax, int attackMax, Item attackHand, Item defenseHand) {
+    public Character(String name, int health, int attack, int protect, int healthMax, int attackMax, Item attackHand, Item defenseHand,
+                     int defaultHealth, int defaultAttack , int defaultProtect) {
         this.name = name;
         this.health = health;
         this.attack = attack;
@@ -28,6 +32,9 @@ public abstract class Character {
         this.attackMax = attackMax;
         this.attackHand = attackHand;
         this.defenseHand = defenseHand;
+        this.defaultHealth = defaultHealth;
+        this.defaultAttack = defaultAttack;
+        this.defaultProtect = defaultProtect;
 
     }
 
@@ -108,7 +115,31 @@ public abstract class Character {
         }
     }
 
-        //------------------------------------ FUNCTION TOSTRING  ------------------------------------------
+    public int getDefaultHealth() {
+        return defaultHealth;
+    }
+
+    public void setDefaultHealth(int defaultHealth) {
+        this.defaultHealth = defaultHealth;
+    }
+
+    public int getDefaultAttack() {
+        return defaultAttack;
+    }
+
+    public void setDefaultAttack(int defaultAttack) {
+        this.defaultAttack = defaultAttack;
+    }
+
+    public int getDefaultProtect() {
+        return defaultProtect;
+    }
+
+    public void setDefaultProtect(int defaultProtect) {
+        this.defaultProtect = defaultProtect;
+    }
+
+    //------------------------------------ FUNCTION TOSTRING  ------------------------------------------
 
         public String toString() {
             return
