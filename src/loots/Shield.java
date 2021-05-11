@@ -10,7 +10,9 @@ public class Shield extends Item {
 
     //------------------------------------ CONSTRUCTORS ---------------------------------------
 
-    public Shield() { super("Shield  of Rage",0,0,3); }
+    public Shield() {
+        super("Shield  of Rage", 0, 0, 3);
+    }
 
 
     //------------------------------------ GETTERS & SETTERS  ------------------------------------------
@@ -18,11 +20,11 @@ public class Shield extends Item {
 
     //------------------------------------ FUNCTION TOSTRING  ------------------------------------------
 
-    public void action(Character player){
+    public void action(Character player) {
         // add points protect
-        if (player instanceof Warrior){
-            int protect = (getProtectBonus() + player.getProtect());
-            player.setProtect(protect);
+
+        if (player instanceof Warrior) {
+            player.setDefenseHand(this);
         }
 
     }

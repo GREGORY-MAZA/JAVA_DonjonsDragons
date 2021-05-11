@@ -55,7 +55,9 @@ public abstract class Item {
     }
 
     //------------------------------------ FUNCTION TOSTRING  ------------------------------------------
-
+    public boolean equals(Object a){
+        return getName().equals(((Item)a).getName());
+    }
     public String toString() {
         return
 

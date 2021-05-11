@@ -20,8 +20,7 @@ public class Sword extends Item {
     public void action(Character player) {
         // add points attack
         if (player instanceof Warrior) {
-            int attack = (getAttackBonus() + player.getAttack());
-            player.setAttack(attack);
+            player.setAttackHand(this);
         }
 
     }

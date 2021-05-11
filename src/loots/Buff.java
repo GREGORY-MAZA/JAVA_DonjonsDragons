@@ -9,7 +9,9 @@ public class Buff extends Item {
 
     //------------------------------------ CONSTRUCTORS ---------------------------------------
 
-    public Buff() { super("Buff of Spirit",0,0,3); }
+    public Buff() {
+        super("Buff of Spirit", 0, 0, 3);
+    }
 
 
     //------------------------------------ GETTERS & SETTERS  ------------------------------------------
@@ -17,11 +19,10 @@ public class Buff extends Item {
 
     //------------------------------------ FUNCTION TOSTRING  ------------------------------------------
 
-    public void action(Character player){
+    public void action(Character player) {
         // add points protect
-        if (player instanceof Wizard){
-            int protect = (getProtectBonus() + player.getProtect());
-            player.setProtect(protect);
+        if (player instanceof Wizard) {
+            player.setDefenseHand(this);
         }
 
     }

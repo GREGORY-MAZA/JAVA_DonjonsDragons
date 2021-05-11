@@ -3,13 +3,16 @@ package loots;
 //-------------------------------- DECLARATION ATTRIBUTES CLASS ---------------------------
 
 import menu.Character;
+import menu.Warrior;
 import menu.Wizard;
 
 public class Fire extends Item {
 
     //------------------------------------ CONSTRUCTORS ---------------------------------------
 
-    public Fire() { super("Fireblade !",5,0,0); }
+    public Fire() {
+        super("Fireblade !", 5, 0, 0);
+    }
 
 
     //------------------------------------ GETTERS & SETTERS  ------------------------------------------
@@ -17,11 +20,10 @@ public class Fire extends Item {
 
     //------------------------------------ FUNCTION TOSTRING  ------------------------------------------
 
-    public void action(Character player){
+    public void action(Character player) {
         // add points attack
-        if (player instanceof Wizard){
-            int attack = (getAttackBonus() + player.getAttack());
-            player.setAttack(attack);
+        if (player instanceof Wizard) {
+            player.setAttackHand(this);
         }
 
     }

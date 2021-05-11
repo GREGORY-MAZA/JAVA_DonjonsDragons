@@ -10,7 +10,9 @@ public class Hammer extends Item {
 
     //------------------------------------ CONSTRUCTORS ---------------------------------------
 
-    public Hammer() { super("Hammer",5,0,0); }
+    public Hammer() {
+        super("Hammer", 5, 0, 0);
+    }
 
 
     //------------------------------------ GETTERS & SETTERS  ------------------------------------------
@@ -18,14 +20,15 @@ public class Hammer extends Item {
 
     //------------------------------------ FUNCTION TOSTRING  ------------------------------------------
 
-    public void action(Character player){
+    public void action(Character player) {
         // add points attack
-        if (player instanceof Warrior){
-            int attack = (getAttackBonus() + player.getAttack());
-            player.setAttack(attack);
+        if (player instanceof Warrior) {
+            if (player instanceof Warrior) {
+                player.setAttackHand(this);
+            }
+
         }
 
+        //-----------------------------------  END ----------------------------------
     }
-
-    //-----------------------------------  END ----------------------------------
 }

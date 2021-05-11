@@ -42,9 +42,9 @@ public class MenuGame {
         String Wiwi = "Wizard";
 
 
-        System.out.println("                     ************************************************************");
+        System.out.println("**********************************************************************************************************");
         System.out.println("          * * * * * * *  If you want play a new adventure write " + Wawa + " or " + Wiwi + " * * * * * * *");
-        System.out.println("                     ************************************************************");
+        System.out.println("**********************************************************************************************************");
 
         Scanner ChoixPerso = new Scanner(System.in); // Demander une Entré clavier
         String LeChoix = ChoixPerso.nextLine(); // Récupère la chaine de caractere
@@ -103,10 +103,9 @@ public class MenuGame {
         if (LeChoix.equalsIgnoreCase("Wizard")) {
             HeroCharacter = new Wizard(LeChoixDuName);
         }
-
+        System.out.println("                                                       -----===== HERO =====-----");
+        System.out.println(" ");
         System.out.println(HeroCharacter.toString());
-        System.out.println("");
-        System.out.println("");
         System.out.println("");
         System.out.println("                                                     -----===== RIGHT HAND =====-----");
         System.out.println(" ");
@@ -156,15 +155,35 @@ public class MenuGame {
 
                     int repDice = Tools.RollTheDice();
                     HeroBoardGame.setIndex(HeroBoardGame.getIndex() + repDice);
-                    Case HeroCase = HeroBoardGame.getLeNomDeLaListe().get(HeroBoardGame.getIndex()); // case du hero ATM
-                    HeroCase.action(HeroCharacter);
-                    System.out.println(HeroCharacter.toString());
-                    System.out.println("");
-                    System.out.println(HeroCharacter.getAttackHand().toString());
-                    System.out.println(HeroCharacter.getDefenseHand().toString());
-                    System.out.println("");
-                    System.out.println(HeroBoardGame.getLeNomDeLaListe().get(HeroBoardGame.getIndex()).getDescription());
-                    HeroBoardGame.getLeNomDeLaListe().get(HeroBoardGame.getIndex()).action(HeroCharacter);
+
+                    if (HeroBoardGame.getIndex() >= 64) {
+                        ;
+                        HeroBoardGame.setIndex(64);
+                        System.out.println("          Congratulation ! You Win " + LeChoixDuName);
+                        System.out.println("");
+                        Tools.waitSec(2);
+                        System.err.println("          ****************   **      **  ***********     *********  ***      **  ***********            ");
+                        System.err.println("                 **          **      **  **              **         ****     **    **       **                ");
+                        System.err.println("                 **          **      **  **              **         ** **    **     **       **               ");
+                        System.err.println("                 **          **********  ********        ******     **  **   **      **       **                ");
+                        System.err.println("                 **          **      **  **              **         **   **  **      **       **              ");
+                        System.err.println("                 **          **      **  **              **         **    ** **     **       **               ");
+                        System.err.println("                 **          **      **  **              **         **     ****    **       **                ");
+                        System.err.println("                 **          **      **  ***********     *********  **      ***   *********                         ");
+
+                    } else {
+
+
+                        Case HeroCase = HeroBoardGame.getLeNomDeLaListe().get(HeroBoardGame.getIndex()); // case du hero ATM
+                        HeroCase.action(HeroCharacter);
+                        System.out.println(HeroCharacter.toString());
+                        System.out.println("");
+                        System.out.println(HeroCharacter.getAttackHand().toString());
+                        System.out.println(HeroCharacter.getDefenseHand().toString());
+                        System.out.println("");
+                        //System.out.println(HeroBoardGame.getLeNomDeLaListe().get(HeroBoardGame.getIndex()).getDescription());
+                        //HeroBoardGame.getLeNomDeLaListe().get(HeroBoardGame.getIndex()).action(HeroCharacter);
+                    }
 
                 }
                 if (ChoiceRerollDice.equalsIgnoreCase("no")) {
@@ -177,21 +196,7 @@ public class MenuGame {
                 Tools.StopGame();
             }
 
-            if (HeroBoardGame.getIndex() >= 64){ ;
-            HeroBoardGame.setIndex(64);
-            System.out.println("          Congratulation ! You Win " + LeChoixDuName);
-            System.out.println("");
-            Tools.waitSec(2);
-            System.err.println("          ****************   **      **  ***********     *********  ***      **  ***********            ");
-            System.err.println("                 **          **      **  **              **         ****     **    **       **                ");
-            System.err.println("                 **          **      **  **              **         ** **    **     **       **               ");
-            System.err.println("                 **          **********  ********        ******     **  **   **      **       **                ");
-            System.err.println("                 **          **      **  **              **         **   **  **      **       **              ");
-            System.err.println("                 **          **      **  **              **         **    ** **     **       **               ");
-            System.err.println("                 **          **      **  **              **         **     ****    **       **                ");
-            System.err.println("                 **          **      **  ***********     *********  **      ***   *********                         ");
 
         }
-
     }
-}}
+}

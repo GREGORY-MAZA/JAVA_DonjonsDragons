@@ -25,10 +25,11 @@ public class Axe extends Item {
     public void action(Character player) {
         // add points attack
         if (player instanceof Warrior) {
+            player.setAttackHand(this);
+
             /*int attack = (getAttackBonus() + player.getAttack());
             String itemName = getName();
             player.setAttack(attack);*/
-            player.setAttackHand(this);
 
 
 

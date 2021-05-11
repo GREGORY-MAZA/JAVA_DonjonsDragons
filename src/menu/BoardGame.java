@@ -6,10 +6,7 @@ import cases.Case;
 import cases.ChestCase;
 import cases.EmptyCase;
 import cases.EnemyCase;
-import loots.Axe;
-import loots.Buff;
-import loots.Fire;
-import loots.Shield;
+import loots.*;
 import mobs.Dragon;
 import mobs.Enemy;
 import mobs.Gobelin;
@@ -26,20 +23,32 @@ public class BoardGame {
     //------------------------------------ CONSTRUCTORS ---------------------------------------
 
     public BoardGame(){
-        for (int i = 0 ; i < 4; i++){
-            leNomDeLaListe.add(new ChestCase(new Axe()));
-        }
-        for (int i = 0 ; i < 10; i++){
-            leNomDeLaListe.add(new ChestCase(new Axe()));
-        }
-        for (int i = 0 ; i < 10; i++){
-            leNomDeLaListe.add(new ChestCase(new Axe()));
-        }
-        for (int i = 0 ; i <9; i++){
-            leNomDeLaListe.add(new ChestCase(new Axe()));
+        for (int i = 0 ; i < 3; i++){
+            leNomDeLaListe.add(new EnemyCase(new Dragon()));
         }
         for (int i = 0 ; i < 7; i++){
+            leNomDeLaListe.add(new EnemyCase(new Orc()));
+        }
+        for (int i = 0 ; i < 8; i++){
+            leNomDeLaListe.add(new EnemyCase(new Gobelin()));
+        }
+        for (int i = 0 ; i <3; i++){
+            leNomDeLaListe.add(new ChestCase(new Axe()));
+        }
+        for (int i = 0 ; i <3; i++){
+            leNomDeLaListe.add(new ChestCase(new Sword()));
+        }
+        for (int i = 0 ; i <3; i++){
+            leNomDeLaListe.add(new ChestCase(new Hammer()));
+        }
+        for (int i = 0 ; i < 3; i++){
             leNomDeLaListe.add(new ChestCase(new Fire()));
+        }
+        for (int i = 0 ; i < 3; i++){
+            leNomDeLaListe.add(new ChestCase(new Ice()));
+        }
+        for (int i = 0 ; i < 3; i++){
+            leNomDeLaListe.add(new ChestCase(new Lightning()));
         }
         for (int i = 0 ; i < 8; i++){
             leNomDeLaListe.add(new ChestCase(new Buff()));
@@ -47,8 +56,14 @@ public class BoardGame {
         for (int i = 0 ; i < 8; i++){
             leNomDeLaListe.add(new ChestCase(new Shield()));
         }
-        for (int i = 0 ; i <8 ; i++){
+        for (int i = 0 ; i <6 ; i++){
             leNomDeLaListe.add(new EmptyCase());
+        }
+        for (int i = 0 ; i < 4; i++){
+            leNomDeLaListe.add(new ChestCase(new Potion()));
+        }
+        for (int i = 0 ; i < 2; i++){
+            leNomDeLaListe.add(new ChestCase(new MegaPotion()));
         }
     }
 

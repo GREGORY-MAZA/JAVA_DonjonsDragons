@@ -38,14 +38,14 @@ public class ChestCase extends Case {
     }*/
 
     public ChestCase (Item item){
-        super ("This a ITEM ! " + item.getName());
+        super ("                       = = = = = = = = = = =| NEW ITEM " + item.getName() + " |= = = = = = = = = = = = ");
         this.item =item;
     }
 
 
     @Override
     public void action(Character player) {
-        System.out.println("super un coffre " + item.getName());
+        System.out.println("     ---------<<<<| NEW ITEM " + item.getName() + ">>>>>---------");
         item.action(player);
     }
 
