@@ -2,8 +2,8 @@ package cases;
 
 //-------------------------------- DECLARATION ATTRIBUTES CLASS ---------------------------
 
-import menu.Character;
 import mobs.Enemy;
+import menu.Character;
 
 /** Classe EnemyCase qui permet de créer un Objet EnemyCase qui hérite de la classe abstraite Case
  * @see Case
@@ -11,12 +11,13 @@ import mobs.Enemy;
 
 public class EnemyCase extends Case {
 
-    private Enemy enemyType;
+    private Enemy enemy;
 
     //------------------------------------ CONSTRUCTORS ---------------------------------------
 
-    public EnemyCase (Enemy enemy){ super ("Ready to fight ? VERSUS " + enemy.getName());
-        this.enemyType = enemy;
+    public EnemyCase (Enemy enemy){
+        super ("                       = = = = = = = = = = =| Time to FIGHT ! VERSUS " + enemy.getName() + " |= = = = = = = = = = = = ");
+        this.enemy = enemy;
     }
 
     /**
@@ -25,9 +26,10 @@ public class EnemyCase extends Case {
      * prend en parametre player
      */
 
-    @Override
-    public void action(Character player) {
-        System.out.println("Je tombe sur un enemy : " + enemyType.getName());
+
+    public void action(Character player ,Enemy pnj) {
+        System.out.println("Je tombe sur un enemy : " + enemy.getName());
+        enemy.action(player ,pnj );
     }
 
 }

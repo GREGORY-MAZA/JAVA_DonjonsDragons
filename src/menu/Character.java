@@ -116,6 +116,7 @@ public abstract class Character {
         return attackHand;
     }
 
+
     /**
      * Permet de comparer les points d'attaque des items pour ne pas l'équiper une 2eme fois
      * @param attackHand
@@ -126,7 +127,8 @@ public abstract class Character {
     public void setAttackHand(Item attackHand) {
         if (!attackHand.equals(this.attackHand)) {
             this.attackHand = attackHand;
-            this.attack += attackHand.getAttackBonus();
+           // this.attack += attackHand.getAttackBonus();
+            this.attack = defaultAttack + attackHand.getAttackBonus();
 
         }
         // todo verify max attack
@@ -145,7 +147,7 @@ public abstract class Character {
     public void setDefenseHand(Item defenseHand) {
         if (!defenseHand.equals(this.defenseHand)) {
             this.defenseHand = defenseHand;
-            this.protect += defenseHand.getProtectBonus();
+            this.protect = defaultProtect + defenseHand.getProtectBonus();
 
         }
     }

@@ -2,6 +2,8 @@ package mobs;
 
 //-------------------------------- DECLARATION ATTRIBUTES CLASS ---------------------------
 
+import menu.Character;
+
 /** Class Enemy est la classe Parent abstraite de Dragon ,Gobelin et Orc.
  * Elle contient les attributs :
  * nom (String)  ,points de vie (int) ,points d'attaque (int)
@@ -60,5 +62,5 @@ public abstract class Enemy {
                         "     HEALTH POINT : " + health +
                         "     STRENGTH : " + attack;
     }
-
+    public abstract void action(Character player, Enemy pnj);
 }

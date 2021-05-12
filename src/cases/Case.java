@@ -1,6 +1,8 @@
 package cases;
 
 import menu.Character;
+import mobs.Enemy;
+
 import java.util.ArrayList;
 //-------------------------------- DECLARATION ATTRIBUTES CLASS ---------------------------
 
