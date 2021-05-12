@@ -4,6 +4,11 @@ package loots;
 
 import menu.Character;
 
+/** Class Item est la classe Parent abstraite de tout le package loots.
+ * Elle contient les attributs :
+ * nom (String)  ,les points Bonus d'attaque ,les points Bonus de vie ,les points Bonus de protection
+ */
+
 public abstract class Item {
 
     private String name;
@@ -12,6 +17,14 @@ public abstract class Item {
     private int protectBonus;
 
     //------------------------------------ CONSTRUCTORS ---------------------------------------
+
+    /**
+     *
+     * @param name = nom de l'item (String)
+     * @param attackBonus = points Bonus d'attaque (int)
+     * @param healthBonus = points Bonus de vie (int)
+     * @param protectBonus = points Bonus de protection (int)
+     */
 
     public Item(String name, int attackBonus, int healthBonus, int protectBonus) {
         this.name = name;
@@ -55,9 +68,22 @@ public abstract class Item {
     }
 
     //------------------------------------ FUNCTION TOSTRING  ------------------------------------------
+
+    /**
+     * Fonction equals qui permet de comparer les noms des Item(Objet)
+     * @param a
+     * @return
+     */
+
     public boolean equals(Object a){
         return getName().equals(((Item)a).getName());
     }
+
+    /**
+     * Fonction toString qui permet de renvoyer les informations de l'objet Item sous forme de texte
+     * @return
+     * Retourne le nom,les points Bonus d'attaque, Bonus de protection  et Bonus de vie du personnage
+     */
     public String toString() {
         return
 

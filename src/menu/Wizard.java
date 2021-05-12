@@ -5,6 +5,10 @@ package menu;
 import loots.Hand;
 import loots.Item;
 
+/** Classe Wizard qui permet de créer un Objet Warrior qui hérite de la classe abstraite Character
+ * @see Character
+ */
+
 public class Wizard extends Character{
 
     //private String itemSpell;
@@ -17,7 +21,14 @@ public class Wizard extends Character{
     //public Wizard() {
       //  super("Greg",3,8,0,6,15);
     //}
-     public Wizard(String name) { super(name,5,8,0,6,15,new Hand(),new Hand()); }
+
+    /**
+     *Constructeur de l'objet Wizard qui hérite de Character
+     * @param name
+     * Prend en parametre le choix du nom que l'utilisateur aura choisi
+     */
+
+     public Wizard(String name) { super(name,5,8,0,6,15,new Hand(),new Hand(),5,8,0); }
 
      //public Wizard(String name, int health, int attack,int protect, int healthMax, int attackMax) { super(name,health,attack,protect,healthMax,attackMax); }
 
@@ -38,6 +49,12 @@ public class Wizard extends Character{
     //public void setItemBuff(String itemBuff) { this.itemBuff = itemBuff;}
 
     //------------------------------------ FUNCTION TOSTRING  ------------------------------------------
+
+    /**
+     * Fonction toString qui permet de renvoyer les informations de l'objet Warrior sous forme de texte
+     * @return
+     * Retourne le nom,les points vie, les points d'attaque et les points de protection du personnage
+     */
 
     public String toString() {
         return

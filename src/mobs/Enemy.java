@@ -2,6 +2,11 @@ package mobs;
 
 //-------------------------------- DECLARATION ATTRIBUTES CLASS ---------------------------
 
+/** Class Enemy est la classe Parent abstraite de Dragon ,Gobelin et Orc.
+ * Elle contient les attributs :
+ * nom (String)  ,points de vie (int) ,points d'attaque (int)
+ */
+
 public abstract class Enemy {
 
     private String name;
@@ -11,6 +16,12 @@ public abstract class Enemy {
 
     //------------------------------------ CONSTRUCTORS ---------------------------------------
 
+    /**
+     *
+     * @param name = Nom de l'ennemi (String)
+     * @param health = points de vie de l'ennemi (int)
+     * @param attack = point d'attaque de l'ennemi (int)
+     */
     public Enemy(String name, int health, int attack) {
         this.name = name;
         this.health = health;

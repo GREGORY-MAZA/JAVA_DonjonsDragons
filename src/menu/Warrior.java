@@ -5,6 +5,10 @@ package menu;
 import loots.Hand;
 import loots.Item;
 
+/** Classe Warrior qui permet de créer un Objet Warrior qui hérite de la classe abstraite Character
+ * @see Character
+ */
+
 public class Warrior extends Character {
 
     //private Item itemWeapon;
@@ -15,6 +19,12 @@ public class Warrior extends Character {
 
 
     //public Warrior() { super("Greg",5,8,0,10,10); }
+
+    /**
+     *Constructeur de l'objet Warrior qui hérite de Character
+     * @param name
+     * Prend en parametre le choix du nom que l'utilisateur aura choisi
+     */
 
     public Warrior(String name) {
         super(name,5,8,0,10,10,new Hand(),new Hand(),5,8,0);
@@ -42,6 +52,11 @@ public class Warrior extends Character {
 
 //------------------------------------ FUNCTION TOSTRING  ------------------------------------------
 
+    /**
+     * Fonction toString qui permet de renvoyer les informations de l'objet Warrior sous forme de texte
+     * @return
+     * Retourne le nom,les points vie, les points d'attaque et les points de protection du personnage
+     */
     @Override
     public String toString() {
         return

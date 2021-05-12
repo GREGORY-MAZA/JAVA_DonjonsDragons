@@ -4,6 +4,13 @@ package menu;
 
 import loots.Item;
 
+/** Class Character est la classe Parent abstraite de Warrior et Wizard.
+ * Elle contient les attributs :
+ * nom (String)  ,points de vie (int) ,points d'attaque (int) ,points de protection (int) ,points de vie Max (int),
+ * points d'attaqye Max (int), main d'attaque (Item Objet), main défense (Item Objet),points de vie par défaut (int),
+ * points d'attaque par défaut (int)  ,points de protection par défaut (int).
+ */
+
 public abstract class Character {
 
     private String name;
@@ -21,6 +28,21 @@ public abstract class Character {
 
     //------------------------------------ CONSTRUCTORS ---------------------------------------
 
+    /**
+     * CONSTRUCTORS
+     *
+     * @param name = nom du personnage (String)
+     * @param health = points de vie (int)
+     * @param attack = points d'attaque (int)
+     * @param protect = points de protection (int)
+     * @param healthMax = points de vie Max (int)
+     * @param attackMax = points d'attaqye Max (int)
+     * @param attackHand = main d'attaque (Item Objet)
+     * @param defenseHand = main défense (Item Objet)
+     * @param defaultHealth = points de vie par défaut (int)
+     * @param defaultAttack = points d'attaque par défaut (int)
+     * @param defaultProtect = points de protection par défaut (int)
+     */
 
     public Character(String name, int health, int attack, int protect, int healthMax, int attackMax, Item attackHand, Item defenseHand,
                      int defaultHealth, int defaultAttack , int defaultProtect) {
@@ -94,6 +116,13 @@ public abstract class Character {
         return attackHand;
     }
 
+    /**
+     * Permet de comparer les points d'attaque des items pour ne pas l'équiper une 2eme fois
+     * @param attackHand
+     * Prend en parametre l'attribut attackHand de type Item
+     *
+     */
+
     public void setAttackHand(Item attackHand) {
         if (!attackHand.equals(this.attackHand)) {
             this.attackHand = attackHand;
@@ -106,6 +135,12 @@ public abstract class Character {
     public Item getDefenseHand() {
         return defenseHand;
     }
+
+    /**
+     * Permet de comparer les points de défense de l'item pour ne pas l'équiper une 2eme fois
+     * @param defenseHand
+     * Prend en parametre l'attribut defenseHand de type Item
+     */
 
     public void setDefenseHand(Item defenseHand) {
         if (!defenseHand.equals(this.defenseHand)) {

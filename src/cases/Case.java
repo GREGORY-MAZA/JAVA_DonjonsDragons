@@ -1,10 +1,13 @@
 package cases;
 
 import menu.Character;
-
+import java.util.ArrayList;
 //-------------------------------- DECLARATION ATTRIBUTES CLASS ---------------------------
 
-import java.util.ArrayList;
+/** Class Case est la classe Parent abstraite de EnemyCase ,EmptyCase et ChestCase.
+ * Elle contient l'attribut :
+ * description (String)
+ */
 
 public abstract class Case {
     private String description;
@@ -12,6 +15,11 @@ public abstract class Case {
     //------------------------------------ CONSTRUCTORS ---------------------------------------
 
     public Case(){}
+
+    /**
+     *
+     * @param description = La description de la case (String)
+     */
     public Case (String description){
         this.description = description;
     }

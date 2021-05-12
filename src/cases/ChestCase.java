@@ -9,6 +9,10 @@ import menu.Character;
 import mobs.Enemy;
 import menu.BoardGame;
 
+/** Classe ChestCase qui permet de créer un Objet ChestCase qui hérite de la classe abstraite Case
+ * @see Case
+ */
+
 public class ChestCase extends Case {
 
     //private Weapon weaponChest;
@@ -42,7 +46,11 @@ public class ChestCase extends Case {
         this.item =item;
     }
 
-
+    /**
+     * Fonction action qui permet de renvoyer un System.out.println avec le texte souhaité
+     * @param player
+     * prend en parametre player
+     */
     @Override
     public void action(Character player) {
         System.out.println("     ---------<<<<| NEW ITEM " + item.getName() + ">>>>>---------");

@@ -5,6 +5,10 @@ package cases;
 import menu.Character;
 import mobs.Enemy;
 
+/** Classe EnemyCase qui permet de créer un Objet EnemyCase qui hérite de la classe abstraite Case
+ * @see Case
+ */
+
 public class EnemyCase extends Case {
 
     private Enemy enemyType;
@@ -15,6 +19,11 @@ public class EnemyCase extends Case {
         this.enemyType = enemy;
     }
 
+    /**
+     * Fonction action qui permet de renvoyer un System.out.println avec le texte souhaité
+     * @param player
+     * prend en parametre player
+     */
 
     @Override
     public void action(Character player) {
