@@ -4,6 +4,7 @@ package cases;
 
 import loots.Item;
 import menu.Character;
+import mobs.Enemy;
 
 
 /** Classe ChestCase qui permet de créer un Objet ChestCase qui hérite de la classe abstraite Case
@@ -28,7 +29,7 @@ public class ChestCase extends Case {
      */
     @Override
     public void action(Character player) {
-        System.out.println("     ---------<<<<| NEW ITEM " + item.getName() + ">>>>>---------");
+        System.out.println("<<<<| NEW ITEM " + item.getName() + ">>>>>");
         item.action(player);
     }
 

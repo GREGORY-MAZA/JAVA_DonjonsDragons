@@ -3,6 +3,7 @@ package menu;
 import cases.Case;
 import loots.Hand;
 import loots.Item;
+import mobs.Enemy;
 
 import java.util.Collections;
 import java.util.Random;
@@ -21,6 +22,7 @@ public class MenuGame {
     private Character HeroCharacter;
     private Character HeroCharacter2;
     //private ItemSkill HeroItemSkill;
+    //private Enemy EnemyCharacter;
 
 
     public MenuGame() {
@@ -34,6 +36,7 @@ public class MenuGame {
         HeroBuff = null;
         HeroCharacter = null;
         //HeroItemSkill = null;
+        //EnemyCharacter = null;
     }
 
     public void MenuChoixPerso() {

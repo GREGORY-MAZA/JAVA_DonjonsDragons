@@ -18,7 +18,7 @@ public class Hammer extends Item {
      */
 
     public Hammer() {
-        super("Hammer", 5, 0, 0);
+        super("Hammer", 3, 0, 0);
     }
 
 
