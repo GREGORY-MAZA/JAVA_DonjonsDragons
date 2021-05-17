@@ -37,9 +37,9 @@ public class Tools {
 
     public static int RollTheDice() {
        int DiceGameFace = (int) (Math.random()*6 + 1);
-        System.err.println("=======================================================================================================");
-        System.err.println("                             You roll the dice ! : " + DiceGameFace);
-        System.err.println("=======================================================================================================");
+        System.err.println("==========================================================");
+        System.err.println("================ You roll the dice ! : " + DiceGameFace + " =================");
+        System.err.println("==========================================================");
         return DiceGameFace;
     }
 

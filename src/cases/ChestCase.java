@@ -29,7 +29,11 @@ public class ChestCase extends Case {
      */
     @Override
     public void action(Character player) {
+        System.out.println("");
+        System.out.println("<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>");
         System.out.println("<<<<| NEW ITEM " + item.getName() + ">>>>>");
+        System.out.println("<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>");
+        System.out.println("");
         item.action(player);
     }
 

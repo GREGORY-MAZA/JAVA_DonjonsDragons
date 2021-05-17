@@ -35,11 +35,19 @@ public class EnemyCase extends Case {
     @Override
     public void action(Character player) {
         while (player.getHealth() > 0 && enemy.getHealth() > 0) {
-            System.out.println("]]]]#=- The " + enemy.getName() + " had " + enemy.getHealth() + " Health Points -=#[[[[");
-            System.out.println("        -=#[You hit " + enemy.getName() + "    " + player.getAttack() + " Dammage !]#=-");
+            System.out.println("");
+            System.out.println("o==[]>>>>>>>         | The " + enemy.getName() + " had " + enemy.getHealth() + " Health Points");
+            System.out.println("o====[]============> | You hit " + enemy.getName() + "    " + player.getAttack() + " Dammage !");
             enemy.setHealth(enemy.getHealth() - player.getAttack());
+            System.out.println("");
             if (enemy.getHealth() <= 0) {
-                System.out.println(" The " + enemy.getName() + " is DEAD" );
+                System.out.println("          **************************************                                                                      ");
+                System.out.println("         ****************************************                                   ");
+                System.out.println("        ****                                  ****                                   ");
+                System.out.println("                  The " + enemy.getName() + " is DEAD" );
+                System.out.println("        ****                                   ****                                   ");
+                System.out.println("         ****************************************                                   ");
+                System.out.println("           *************************************                                                                     ");
                 System.out.println("");
                 System.out.println("***                          ***   **************   *******          ***      ");
                 System.out.println(" ***                        ***        ***         ***  ***         ***   ");
@@ -49,8 +57,8 @@ public class EnemyCase extends Case {
                 System.out.println("     *******       *******    **************   ***          *******                       ");
                 System.out.println("");
             } else if (enemy.getHealth() > 0){
-                System.out.println( " You Have " + player.getHealth() + " Health Points");
-                System.out.println( " ]]]]#=- "+ enemy.getName() + " Hit you ! " + enemy.getAttack() + " dammage ! [[[[#=-");
+                System.out.println( "o====[]============> | You Have " + player.getHealth() + " Health Points");
+                System.out.println( "o==[]>>>>>>>         | "+ enemy.getName() + " Hit you ! " + enemy.getAttack() + " dammage !");
                 player.setHealth(player.getHealth() - enemy.getAttack());
 
                 if ( player.getHealth() <= 0 ){
