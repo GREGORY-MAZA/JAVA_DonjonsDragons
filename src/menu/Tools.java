@@ -42,6 +42,7 @@ public class Tools {
         System.err.println("==========================================================");
         return DiceGameFace;
     }
+    //public static
 
 
 
