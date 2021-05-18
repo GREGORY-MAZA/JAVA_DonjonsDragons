@@ -2,6 +2,7 @@ package cases;
 
 //-------------------------------- DECLARATION ATTRIBUTES CLASS ---------------------------
 
+import loots.Hand;
 import loots.Shield;
 import menu.Tools;
 import mobs.Enemy;
@@ -74,7 +75,8 @@ public class EnemyCase extends Case {
                 player.setHealth(player.getHealth() - enemy.getAttack());
                 if (player.getProtect() <= 0){
                     player.setProtect(player.getDefaultProtect());
-                    System.out.println("Your ARMOR is BROKENNNNN !!!");
+                    player.setDefenseHand(new Hand());
+                    System.out.println("       >>>>>>>>> There no Armor Around here....<<<<<<<<<<<<");
 
                 }
 
