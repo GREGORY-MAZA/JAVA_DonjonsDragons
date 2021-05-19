@@ -74,9 +74,18 @@ public class MenuGame {
 
         Tools.waitSec(1);
 
-        System.out.println("=======================================");
-        System.out.println("===== Choose your name " + LeChoix + "=========");
-        System.out.println("=======================================");
+        System.out.println("oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo");
+        System.out.println("");
+        System.out.println("            ******       ***   ************   ******   *******   ***************         ******************                                                                      ");
+        System.out.println("           *** ***      ***   ***      ***   *** ***  **  ***   ***         ***         ***            ***                                   ");
+        System.out.println("          ***  ***     ***   ***      ***   ***  *** **  ***   ***         ***                        ***                                  ");
+        System.out.println("         ***   ***    ***   ***      ***   ***   *****  ***   ***         ***                ***********                                    ");
+        System.out.println("        ***    ***   ***   ************   ***    ****  ***   ***************                ***                                     ");
+        System.out.println("       ***     ***  ***   ***      ***   ***           ***  ***                            ***                                ");
+        System.out.println("      ***      *** ***   ***      ***   ***           ***  ***                                                           ");
+        System.out.println("     ***       ******   ***      ***   ***           ***  ***************                ***                                                    ");
+        System.out.println("");
+        System.out.println("oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo");
         Scanner ChoixName = new Scanner(System.in);
         String LeChoixDuName = ChoixName.nextLine();
 
@@ -87,17 +96,17 @@ public class MenuGame {
 
         Tools.waitSec(1);
 
-        System.out.println("          ==============================================================================================");
+        System.out.println("==============================================================================================");
         System.out.println(" ");
-        System.out.println("            *************   *************   **************   *************   **       **   **************  ");
-        System.out.println("             **              **         **   **    **    **   **         **   **       **   **                    ");
-        System.out.println("              **              **         **   **    **    **   **         **   **       **   **               ");
-        System.out.println("               **              **         **   **    **    **   ***********     **       **   **************                      ");
-        System.out.println("                **              *************   **    **    **   **              **       **               **      ");
-        System.out.println("                 **              **         **   **    **    **   **              **       **               **         ");
-        System.out.println("                  *************   **         **   **    **    **   **              ***********   **************                     ");
+        System.out.println("  *************   *************   **************   *************   **       **   **************  ");
+        System.out.println("   **              **         **   **    **    **   **         **   **       **   **                    ");
+        System.out.println("    **              **         **   **    **    **   **         **   **       **   **               ");
+        System.out.println("     **              **         **   **    **    **   ***********     **       **   **************                      ");
+        System.out.println("      **              *************   **    **    **   **              **       **               **      ");
+        System.out.println("       **              **         **   **    **    **   **              **       **               **         ");
+        System.out.println("        *************   **         **   **    **    **   **              ***********   **************                     ");
         System.out.println("");
-        System.out.println("                   =============================================================================================");
+        System.out.println("=============================================================================================");
 
         Tools.waitSec(1);
 
@@ -123,11 +132,19 @@ public class MenuGame {
         System.out.println("");
         System.out.println("");
 
-        System.err.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-        System.err.println("                    Start a new game ?");
-        System.err.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+        System.err.println("                               =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+        System.err.println("                               =-=-=-=-=-=-=-=       Start a new game ?        =-=-=-=-=-=-=-=");
+        System.err.println("                               =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
         System.err.println(" ");
-        System.err.println("                      yes or no ? ");
+        System.err.println("                    ***     ***   ************   ************            ******       ***   ************                                                                         ");
+        System.err.println("                    ***    ***   ************   ************            *** ***      ***   ************                                                       ");
+        System.err.println("                    ***   ***   **             **                      ***  ***     ***   ***      ***                              ");
+        System.err.println("                     *** ***   *******        ************            ***   ***    ***   ***      ***                                          ");
+        System.err.println("                       ****   *******        ************            ***    ***   ***   ***      ***                                         ");
+        System.err.println("                       ***   **                       **            ***     ***  ***   ***      ***                              ");
+        System.err.println("                      ***   ************   ************            ***      *** ***   ************                                                        ");
+        System.err.println("                     ***   ************   ************            ***       ******   ************                                                                   ");
+        System.err.println(" ");
 
 
         Scanner StartNewGame = new Scanner(System.in);
@@ -135,14 +152,14 @@ public class MenuGame {
 
         if (RepStartNewGame.equalsIgnoreCase("yes")) {
 
-            System.err.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-            System.err.println("                    ONCE UPON A TIME");
-            System.err.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+            System.err.println("                               =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+            System.err.println("                                                   ONCE UPON A TIME");
+            System.err.println("                               =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
             System.err.println("");
-            System.err.println(".......A long time ago a " + LeChoix + " named " + LeChoixDuName + " did a quest .... ");
-            System.err.println("......The great epic quest of 'The Digital Campus student' ........");
+            System.err.println("                               .......A long time ago a " + LeChoix + " named " + LeChoixDuName + " did a quest .... ");
+            System.err.println("                               ......The great epic quest of 'The Digital Campus student' ...");
             System.err.println("");
-            System.err.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+            System.err.println("                               =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
             System.out.println("");
             System.out.println("");
             HeroDiceGame = new DiceGame(0);
@@ -152,9 +169,18 @@ public class MenuGame {
             while (HeroBoardGame.getIndex() < 64) {
                 System.out.println(HeroBoardGame.toString());
                 System.out.println("");
-                System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-                System.out.println("            Do you want roll the dice ?      yes / no");
-                System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+                System.out.println("                              =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+                System.out.println("                                          Do you want roll the dice ?      yes / no");
+                System.out.println("                              =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+                System.out.println("                                                       _______            \n" +
+                        "                                                     /\\       \\           \n" +
+                        "                                                    /()\\   ()  \\          \n" +
+                        "                                                   /    \\_______\\         \n" +
+                        "                                                   \\    /()     /         \n" +
+                        "                                                    \\()/   ()  /          \n" +
+                        "                                                     \\/_____()/");
+                System.out.println("");
+
                 Scanner RepRerollDice = new Scanner(System.in);
                 String ChoiceRerollDice = RepRerollDice.nextLine();
                 if (ChoiceRerollDice.equalsIgnoreCase("yes")) {

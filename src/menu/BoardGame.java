@@ -81,7 +81,9 @@ public class BoardGame {
 
     @Override
     public String toString() {
-        return "======> You are on the square number : "+ index;
+
+        return "          o====[]============>                You are on the square number : "+ index + "                <============[]====o";
+
     }
 
 
