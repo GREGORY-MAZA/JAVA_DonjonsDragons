@@ -100,8 +100,15 @@ public class EnemyCase extends Case {
             enemy.setHealth(enemy.getHealth() - player.getAttack());
             System.out.println("");
             if (enemy.getHealth() <= 0) {
+                player.setExperience(player.getExperience() + enemy.getXP());
+
+                if (player.getExperience() >= 100){
+                    player.setExperience(player.getExperience() - 100);
+                    player.setLevel(player.getLevel() + 1);
+                    System.out.println("o====[]============> YOU ARE NOW LEVEL " + player.getLevel() + "<============[]====o");
+                }
                 System.out.println("");
-                System.out.println("                  The " + enemy.getName() + " is DEAD" );
+                System.out.println("                  The " + enemy.getName() + " is DEAD and Give you " + enemy.getXP() + " Experience Points !" );
                 System.out.println("");
                 System.out.println("                               / \\\n" +
                         "                               | |\n" +

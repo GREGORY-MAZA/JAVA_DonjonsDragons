@@ -17,7 +17,7 @@ public class Axe extends Item {
      * Constructeur de l'Objet Axe qui hérite de la classe abstraite Item
      */
 
-    public Axe() { super("Axe",2,0,0); }
+    public Axe() { super("Axe",2,0,0,22); }
 
 
     //------------------------------------ GETTERS & SETTERS  ------------------------------------------

@@ -19,7 +19,7 @@ public class Fire extends Item {
      */
 
     public Fire() {
-        super("Fireblade !", 5, 0, 0);
+        super("Fireblade !", 5, 0, 0,33);
     }
 
 

@@ -19,7 +19,7 @@ public class Ice extends Item {
      */
 
     public Ice() {
-        super("Ice Blaster", 3, 0, 0);
+        super("Ice Blaster", 3, 0, 0,22);
     }
 
 

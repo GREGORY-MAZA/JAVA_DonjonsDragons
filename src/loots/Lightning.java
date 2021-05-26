@@ -18,7 +18,7 @@ public class Lightning extends Item {
      */
 
     public Lightning() {
-        super("Little Lightning", 2, 0, 0);
+        super("Little Lightning", 2, 0, 0,11);
     }
 
 

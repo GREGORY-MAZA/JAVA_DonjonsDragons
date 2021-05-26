@@ -36,8 +36,15 @@ public class ChestCase extends Case {
         System.out.println("");
         System.out.println("oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo");
         System.out.println("                                           <<<<| NEW ITEM " + item.getName() + ">>>>>");
+        System.out.println("                             <<<<| BONUS ITEM EXPERIENCE " + item.getExperienceBonus() + " Experience Points");
         System.out.println("oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo");
         System.out.println("");
+        player.setExperience(player.getExperience() + item.getExperienceBonus());
+        if (player.getExperience() >= 100){
+            player.setExperience(player.getExperience() - 100);
+            player.setLevel(player.getLevel() + 1);
+            System.out.println("o====[]============> YOU ARE NOW LEVEL " + player.getLevel() + "<============[]====o");
+        }
         item.action(player);
         if (item.getName().equalsIgnoreCase("Shield  of Rage")) {
             System.out.println("                             |<><><>     |  |    <><><>|\n" +

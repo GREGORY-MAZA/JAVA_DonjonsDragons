@@ -14,6 +14,7 @@ public abstract class Enemy {
     private String name;
     private int health;
     private int attack;
+    private int XP;
 
 
     //------------------------------------ CONSTRUCTORS ---------------------------------------
@@ -24,11 +25,11 @@ public abstract class Enemy {
      * @param health = points de vie de l'ennemi (int)
      * @param attack = point d'attaque de l'ennemi (int)
      */
-    public Enemy(String name, int health, int attack) {
+    public Enemy(String name, int health, int attack, int XP) {
         this.name = name;
         this.health = health;
         this.attack = attack;
-
+        this.XP = XP;
     }
 
 
@@ -52,6 +53,9 @@ public abstract class Enemy {
     public void setAttack(int attack) {
         this.attack = attack;
     }
+
+    public int getXP() { return XP; }
+    public void setXP(int XP) { this.XP = XP; }
 
     //------------------------------------ FUNCTION TOSTRING  ------------------------------------------
 

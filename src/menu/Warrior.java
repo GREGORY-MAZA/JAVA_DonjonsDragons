@@ -27,7 +27,7 @@ public class Warrior extends Character {
      */
 
     public Warrior(String name) {
-        super(name,7,8,0,10,10,new Hand(),new Hand(),7,8,0);
+        super(name,7,8,0,10,10,new Hand(),new Hand(),7,8,0,0,1);
         //this.itemWeapon = null;
         //this.itemDefense = null;
     }
@@ -61,7 +61,9 @@ public class Warrior extends Character {
     public String toString() {
         return
 
-                "                 NICKNAME : " + getName() +
+                " NICKNAME : " + getName() +
+                        "                 LEVEL : " + getLevel() +
+                        "                 XP : " + getExperience() +
                 "                 HEALTH POINT : " + getHealth() +
                 "                 STRENGTH : " + getAttack() +
                 "                 ARMOR : " + getProtect();

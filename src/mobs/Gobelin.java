@@ -17,7 +17,7 @@ public class Gobelin extends Enemy {
      * Constructeur de l'Objet Gobelin qui hérite de la classe abstraite Enemy
      */
 
-    public Gobelin() { super("Gobelin",10,1); }
+    public Gobelin() { super("Gobelin",10,1, 20); }
 
 
 //------------------------------------ GETTERS & SETTERS  ------------------------------------------

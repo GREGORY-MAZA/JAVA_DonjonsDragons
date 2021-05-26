@@ -16,7 +16,7 @@ public class Potion extends Item {
      * Constructeur de l'Objet Potion qui hérite de la classe abstraite Item
      */
 
-    public Potion() { super("Little Potion of health",0,2,0); }
+    public Potion() { super("Little Potion of health",0,2,0,50); }
 
 
     //------------------------------------ GETTERS & SETTERS  ------------------------------------------

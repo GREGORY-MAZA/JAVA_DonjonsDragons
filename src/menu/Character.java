@@ -24,6 +24,8 @@ public abstract class Character {
     private int defaultHealth;
     private int defaultAttack;
     private int defaultProtect;
+    private int experience;
+    private int level;
 
 
     //------------------------------------ CONSTRUCTORS ---------------------------------------
@@ -45,7 +47,7 @@ public abstract class Character {
      */
 
     public Character(String name, int health, int attack, int protect, int healthMax, int attackMax, Item attackHand, Item defenseHand,
-                     int defaultHealth, int defaultAttack , int defaultProtect) {
+                     int defaultHealth, int defaultAttack , int defaultProtect, int experience, int level) {
         this.name = name;
         this.health = health;
         this.attack = attack;
@@ -57,6 +59,8 @@ public abstract class Character {
         this.defaultHealth = defaultHealth;
         this.defaultAttack = defaultAttack;
         this.defaultProtect = defaultProtect;
+        this.experience = experience;
+        this.level = level;
 
     }
 
@@ -175,6 +179,14 @@ public abstract class Character {
     public void setDefaultProtect(int defaultProtect) {
         this.defaultProtect = defaultProtect;
     }
+
+    public int getExperience() { return experience; }
+
+    public void setExperience(int experience) { this.experience = experience; }
+
+    public int getLevel() { return level; }
+
+    public void setLevel(int level) { this.level = level; }
 
     //------------------------------------ FUNCTION TOSTRING  ------------------------------------------
 

@@ -29,6 +29,7 @@ public class EmptyCase extends Case {
     public void action(Character player) {
         System.out.println("oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo");
         System.out.println("       <<<<<< You enter an emptu Room ...... So dark Here ! You must walk in the dust >>>>>>> ");
+        System.out.println("                       <<<<<< You found Experience points HERE >>>>>>> ");
         System.out.println("oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo");
         System.out.println("");
         System.out.println("                                      _____________________________________________\n" +
@@ -52,6 +53,13 @@ public class EmptyCase extends Case {
                 "                                     |.','          /%%%%%%%%%%%%%%%\\          ','.|\n" +
                 "                                     |;____________/%%%%%%%%%%%%%%%%%\\____________;|");
         System.out.println("");
+
+        player.setExperience(player.getExperience() + 10);
+        if (player.getExperience() >= 100){
+            player.setExperience(player.getExperience() - 100);
+            player.setLevel(player.getLevel() + 1);
+            System.out.println("o====[]============> YOU ARE NOW LEVEL " + player.getLevel() + "<============[]====o");
+        }
     }
 
 

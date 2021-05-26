@@ -19,7 +19,7 @@ public class Shield extends Item {
      */
 
     public Shield() {
-        super("Shield  of Rage", 0, 0, 3);
+        super("Shield  of Rage", 0, 0, 3,18);
     }
 
 

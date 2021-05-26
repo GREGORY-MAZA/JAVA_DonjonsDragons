@@ -14,7 +14,7 @@ public class Hand extends Item {
 
     //------------------------------------ CONSTRUCTORS ---------------------------------------
 
-    public Hand() { super("Hand",0,0,0); }
+    public Hand() { super("Hand",0,0,0,0); }
 
 
     //------------------------------------ GETTERS & SETTERS  ------------------------------------------

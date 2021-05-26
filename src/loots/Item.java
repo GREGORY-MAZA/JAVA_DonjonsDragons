@@ -15,6 +15,7 @@ public abstract class Item {
     private int attackBonus;
     private int healthBonus;
     private int protectBonus;
+    private int experienceBonus;
 
     //------------------------------------ CONSTRUCTORS ---------------------------------------
 
@@ -26,11 +27,12 @@ public abstract class Item {
      * @param protectBonus = points Bonus de protection (int)
      */
 
-    public Item(String name, int attackBonus, int healthBonus, int protectBonus) {
+    public Item(String name, int attackBonus, int healthBonus, int protectBonus, int experienceBonus) {
         this.name = name;
         this.attackBonus = attackBonus;
         this.healthBonus = healthBonus;
         this.protectBonus = protectBonus;
+        this.experienceBonus = experienceBonus;
     }
 
     //------------------------------------ GETTERS & SETTERS  ------------------------------------------
@@ -66,6 +68,10 @@ public abstract class Item {
     public void setProtectBonus(int protectBonus) {
         this.protectBonus = protectBonus;
     }
+
+    public int getExperienceBonus() { return experienceBonus; }
+
+    public void setExperienceBonus(int experienceBonus) { this.experienceBonus = experienceBonus; }
 
     //------------------------------------ FUNCTION TOSTRING  ------------------------------------------
 

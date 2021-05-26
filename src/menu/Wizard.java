@@ -28,7 +28,7 @@ public class Wizard extends Character{
      * Prend en parametre le choix du nom que l'utilisateur aura choisi
      */
 
-     public Wizard(String name) { super(name,5,8,0,6,15,new Hand(),new Hand(),5,8,0); }
+     public Wizard(String name) { super(name,5,8,0,6,15,new Hand(),new Hand(),5,8,0,0,1); }
 
      //public Wizard(String name, int health, int attack,int protect, int healthMax, int attackMax) { super(name,health,attack,protect,healthMax,attackMax); }
 
@@ -59,7 +59,9 @@ public class Wizard extends Character{
     public String toString() {
         return
 
-                "                 NICKNAME : " + getName() +
+                " NICKNAME : " + getName() +
+                        "                 LEVEL : " + getLevel() +
+                        "                 XP : " + getExperience() +
                         "                 HEALTH POINT : " + getHealth() +
                         "                 SPIRIT : " + getAttack() +
                         "                 ARMOR : " + getProtect();

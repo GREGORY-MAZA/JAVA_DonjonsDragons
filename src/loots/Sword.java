@@ -17,7 +17,7 @@ public class Sword extends Item {
      * Constructeur de l'Objet Sword qui hérite de la classe abstraite Item
      */
 
-    public Sword() { super("Sword",1,0,0); }
+    public Sword() { super("Sword",1,0,0,11); }
 
 
     //------------------------------------ GETTERS & SETTERS  ------------------------------------------

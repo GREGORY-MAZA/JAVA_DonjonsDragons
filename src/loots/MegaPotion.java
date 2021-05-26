@@ -17,7 +17,7 @@ public class MegaPotion extends Item {
      * Constructeur de l'Objet MegaPotion qui hérite de la classe abstraite Item
      */
 
-    public MegaPotion() { super("Mega Potion Heal ! ",0,5,0); }
+    public MegaPotion() { super("Mega Potion Heal ! ",0,5,0,100); }
 
 
     //------------------------------------ GETTERS & SETTERS  ------------------------------------------

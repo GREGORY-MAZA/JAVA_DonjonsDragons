@@ -18,7 +18,7 @@ public class Dragon extends Enemy {
      * Constructeur de l'Objet Dragon qui hérite de la classe abstraite Enemy
      */
 
-    public Dragon() { super("Dragon",15,5); }
+    public Dragon() { super("Dragon",15,5,50); }
 
 
 //------------------------------------ GETTERS & SETTERS  ------------------------------------------

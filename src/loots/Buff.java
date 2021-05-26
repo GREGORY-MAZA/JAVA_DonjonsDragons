@@ -17,7 +17,7 @@ public class Buff extends Item {
      */
 
     public Buff() {
-        super("Buff of Spirit", 0, 0, 3);
+        super("Buff of Spirit", 0, 0, 3,18);
     }
 
 

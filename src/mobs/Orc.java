@@ -20,7 +20,7 @@ public class Orc extends Enemy {
      */
 
     public Orc() {
-        super("Orc", 12, 2);
+        super("Orc", 12, 2 , 30);
     }
 
 
