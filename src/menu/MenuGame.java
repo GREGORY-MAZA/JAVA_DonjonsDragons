@@ -5,6 +5,7 @@ import loots.Hand;
 import loots.Item;
 import mobs.Enemy;
 
+import java.sql.Statement;
 import java.util.Collections;
 import java.util.Random;
 import java.util.Scanner;
@@ -65,6 +66,7 @@ public class MenuGame {
             Tools.StopGame();
         }
 
+
         Tools.waitSec(1);
 
 
@@ -96,6 +98,7 @@ public class MenuGame {
         if (LeChoixDuName.equalsIgnoreCase("Stop")) {
             Tools.StopGame();
         }
+
 
         Tools.waitSec(1);
 
@@ -154,7 +157,7 @@ public class MenuGame {
         String RepStartNewGame = StartNewGame.nextLine();
 
         if (RepStartNewGame.equalsIgnoreCase("yes")) {
-
+            database.saveHero(HeroCharacter);
             System.err.println("                               =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
             System.err.println("                                                   ONCE UPON A TIME");
             System.err.println("                               =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");

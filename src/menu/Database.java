@@ -10,12 +10,14 @@ public class Database {
     Statement statement;
     ResultSet resultSet;
 
- //  --------------------------------------    CONFIG to CONNECT ---------------------------------------
+    //  --------------------------------------    CONFIG to CONNECT ---------------------------------------
 
     public Database() {
         try {
-           // Class.forName("org.mariadb.jdbc.Driver");
             this.connection = DriverManager.getConnection("jdbc:mariadb://localhost:3307/rdK", "root", "");
+            this.statement = connection.createStatement();
+            this.resultSet = null;
+
 
         } catch (Exception e) {
             System.out.println(" ! ! ! ! !  NOTHING HERE ! ! ! ! ! !");
@@ -26,18 +28,15 @@ public class Database {
 
     public void showAllHeroes() {
         try {
-            this.statement = connection.createStatement();
-            this.resultSet = null;
-        resultSet = statement.executeQuery("SELECT * from players");
+
+            resultSet = statement.executeQuery("SELECT * from players");
             while (resultSet.next()) {
-                System.out.println(resultSet.getString(3));
+                System.out.println(resultSet.getString(2));
             }
-        }
-        catch (SQLException e) {
+        } catch (SQLException e) {
             System.out.println("There are no Heroes around here...");
         }
     }
-    //------------------------------------ GETTERS & SETTERS  ------------------------------------------
 
     public Connection getConnection() {
         return connection;
@@ -63,6 +62,23 @@ public class Database {
         this.resultSet = resultSet;
     }
 
+    public void saveHero(Character player) {
+
+        {
+            try {
+                statement.executeUpdate("INSERT INTO players (name , health, power,weapon,defense) " +
+                                "VALUES ('" + player.getName() + "' , '" + player.getDefaultHealth() + "' , '" + player.getDefaultAttack() + "' , '" + player.getAttackHand() + "' , '" + player.getDefenseHand() + "');",
+                        Statement.RETURN_GENERATED_KEYS);
+            } catch (Exception e) {
+                System.out.println(" ! ! ! ! !  AIE ! ! ! ! ! !" + e);
+            }
+
+        }
+        //------------------------------------ GETTERS & SETTERS  ------------------------------------------
+
+
+
 
 //------------------------------------               END               ---------------------------------
+    }
 }
