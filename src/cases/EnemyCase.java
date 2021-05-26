@@ -127,6 +127,9 @@ public class EnemyCase extends Case {
                 System.out.println( "o==[]>>>>>>>                 | "+ enemy.getName() + " Hit you ! " + enemy.getAttack() + " dammage !");
                 System.out.println("o====[]============>         | You Have " + player.getProtect() + " Points of protect");
                 player.setProtect(player.getProtect()- enemy.getAttack());
+                    if (player.getProtect() < 0) {
+                        player.setProtect(0);
+                    }
                 enemy.setAttack(enemy.getAttack() - player.getProtect());
                 player.setHealth(player.getHealth() - enemy.getAttack());
                 if (player.getProtect() <= 0){
