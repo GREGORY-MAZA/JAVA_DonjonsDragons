@@ -8,6 +8,7 @@ import mobs.Enemy;
 import java.util.Collections;
 import java.util.Random;
 import java.util.Scanner;
+import menu.Database;
 
 public class MenuGame {
 
@@ -23,6 +24,7 @@ public class MenuGame {
     private Character HeroCharacter2;
     //private ItemSkill HeroItemSkill;
     //private Enemy EnemyCharacter;
+    private Database database;
 
 
     public MenuGame() {
@@ -37,6 +39,7 @@ public class MenuGame {
         HeroCharacter = null;
         //HeroItemSkill = null;
         //EnemyCharacter = null;
+        database = new Database();
     }
 
     public void MenuChoixPerso() {
@@ -44,7 +47,7 @@ public class MenuGame {
         String Wawa = "Warrior";
         String Wiwi = "Wizard";
 
-
+        database.showAllHeroes();
         System.out.println("**********************************************************************************************************");
         System.out.println("          * * * * * * *  If you want play a new adventure write " + Wawa + " or " + Wiwi + " * * * * * * *");
         System.out.println("**********************************************************************************************************");
