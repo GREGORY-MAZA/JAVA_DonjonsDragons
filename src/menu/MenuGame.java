@@ -16,15 +16,9 @@ public class MenuGame {
     private BoardGame HeroBoardGame;
     private DiceGame HeroDiceGame;
     private Tools tools = new Tools();
-    /*private Item HeroWeapon;
-    private Item HeroArmor;*/
-    //private Spell HeroSpell;
-    //private Defense HeroDefense;
     private Item HeroBuff;
     private Character HeroCharacter;
     private Character HeroCharacter2;
-    //private ItemSkill HeroItemSkill;
-    //private Enemy EnemyCharacter;
     private Database database;
 
 
@@ -32,14 +26,8 @@ public class MenuGame {
 
         HeroDiceGame = null;
         HeroBoardGame = null;
-        /*HeroWeapon = null;
-        HeroArmor = null;*/
-        //HeroSpell = null;
-        //HeroDefense = null;
         HeroBuff = null;
         HeroCharacter = null;
-        //HeroItemSkill = null;
-        //EnemyCharacter = null;
         database = new Database();
     }
 
@@ -50,7 +38,7 @@ public class MenuGame {
 
         database.showAllHeroes();
         System.out.println("**********************************************************************************************************");
-        System.out.println("          * * * * * * *  If you want play a new adventure write " + Wawa + " or " + Wiwi + " * * * * * * *");
+        System.out.println("          * * * * * * *  If you want to play a new adventure type " + Wawa + " or " + Wiwi + " * * * * * * *");
         System.out.println("**********************************************************************************************************");
 
         Scanner ChoixPerso = new Scanner(System.in); // Demander une Entré clavier
